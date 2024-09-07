@@ -1,0 +1,11 @@
+.main {
+  font-family: 'EuclidCircularA-Medium';
+  color: white;
+  font-size: 36px;
+}
+
+.bg {
+  background-image: url('./../../images/bg/quiz.png');
+  position: absolute;
+  z-index: -1;
+}

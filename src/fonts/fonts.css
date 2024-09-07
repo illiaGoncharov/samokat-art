@@ -1,0 +1,19 @@
+@font-face {
+  /* Regular */
+  font-family: 'EuclidCircularA-Regular';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25.36px;
+  text-align: left;
+  src: url('./EuclidCircularA-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  /* Regular */
+  font-family: 'EuclidCircularA-Medium';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25.36px;
+  text-align: left;
+  src: url('./EuclidCircularA-Medium.ttf') format('truetype');
+}

@@ -1,0 +1,58 @@
+.questionCard {
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  background: linear-gradient(0deg, #FF5076 0%, #FFFFFF 100%);
+  padding: 30px;
+  border-radius: 28px;
+  position: relative;
+  height: 60vh;
+  max-height: 624px;
+  max-width: 378px;
+  margin: 0 auto;
+}
+
+.answers {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  margin-bottom: 26px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+}
+
+.actions button {
+  height: 40px;
+  width: 100%;
+  margin: auto;
+  border: none;
+  color: #FF335F;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.desktopControls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 170px;
+}
+
+.desktopControls button {
+  height: 40px;
+  width: 100%;
+  margin: auto;
+  border: none;
+  color: #FF335F;
+  border-radius: 30px;
+  background-color: white;
+}
+

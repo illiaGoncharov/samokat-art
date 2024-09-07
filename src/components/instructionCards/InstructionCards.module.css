@@ -1,0 +1,56 @@
+.instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
+  max-height: 624px;
+  max-width: 378px;
+  margin: 0 auto;
+  background: linear-gradient(0deg, #FF5076 0%, #FFFFFF 100%);
+  padding: 30px;
+  border-radius: 28px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25.36px;
+  text-align: left;
+  position: relative;
+}
+
+.introCardHeading {
+  font-family: 'EuclidCircularA-Medium';
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 58.33px;
+  text-align: left;
+  /* color: #404040; */
+  color: white;
+  padding-top: 170px;
+}
+
+.instructionCard {
+  
+} 
+
+.instructionСardHeader {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.instructionСardHeaderCount,
+.instructionСardHeaderTitle {
+  color: #FF335F;
+}
+
+.instructionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.downArrow {
+  margin: 0 auto;
+}

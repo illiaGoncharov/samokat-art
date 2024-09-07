@@ -1,0 +1,20 @@
+.cards {
+  font-family: 'EuclidCircularA-Medium';
+  cursor: pointer;
+}
+
+.startButtonContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.startButtonContainer button {
+  height: 40px;
+  width: 100%;
+  margin: auto;
+  border: none;
+  color: #FF335F;
+  border-radius: 30px;
+  background-color: white;
+}
