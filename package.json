@@ -1,5 +1,6 @@
 {
-  "name": "ar-test-app",
+  "homepage": "https://github.com/illiaGoncharov/samokat-art.git",
+  "name": "sanokat-art",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
