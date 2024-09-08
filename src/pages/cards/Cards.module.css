@@ -1,6 +1,9 @@
 .cards {
   font-family: 'EuclidCircularA-Medium';
   cursor: pointer;
+  width: calc(100vw - 40px);
+  margin: 0 auto;
+  max-width: 374px;
 }
 
 .startButtonContainer {

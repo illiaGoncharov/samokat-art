@@ -65,7 +65,8 @@
 .calculateButton {
   height: 40px;
   width: calc(100vw - 160px);
-  max-width: 378px;
+  max-width: 300px;
+  
   border-radius: 50px;
   margin-top: 26px;
   background-color: #FF335F;
