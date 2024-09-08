@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/samokat-art/static/css/main.c5620f8b.css",
-    "main.js": "/samokat-art/static/js/main.cb65199e.js",
+    "main.css": "/samokat-art/static/css/main.27209875.css",
+    "main.js": "/samokat-art/static/js/main.36e4c34d.js",
     "static/js/453.8bbe034b.chunk.js": "/samokat-art/static/js/453.8bbe034b.chunk.js",
     "static/media/AR1.usdz": "/samokat-art/static/media/AR1.c19c1622d7674a1d5f46.usdz",
+    "static/media/AR4.usdz": "/samokat-art/static/media/AR4.ce452c3c9c0a3990fbcb.usdz",
     "static/media/AR3.usdz": "/samokat-art/static/media/AR3.819a7f6481bfafefa29b.usdz",
     "static/media/AR2.usdz": "/samokat-art/static/media/AR2.8ac7357224bdfd8aac54.usdz",
     "static/media/AR1.glb": "/samokat-art/static/media/AR1.9d219b725752edbe73c8.glb",
+    "static/media/AR4.glb": "/samokat-art/static/media/AR4.b99c7d19caaece42a2bd.glb",
     "static/media/AR3.glb": "/samokat-art/static/media/AR3.2c1bb3e7555cc10e1a96.glb",
-    "static/media/quiz.png": "/samokat-art/static/media/quiz.dc01bad5a7de48250c87.png",
+    "static/media/quiz.jpg": "/samokat-art/static/media/quiz.d59417c1a8a54438cc94.jpg",
     "static/media/AR2.glb": "/samokat-art/static/media/AR2.f62e1af6484b3928fc8b.glb",
+    "static/media/crazyBorder.png": "/samokat-art/static/media/crazyBorder.a8288230f1a3b5922131.png",
     "static/media/EuclidCircularA-Medium.ttf": "/samokat-art/static/media/EuclidCircularA-Medium.a5befbfcb71cd093cc56.ttf",
     "static/media/EuclidCircularA-Regular.ttf": "/samokat-art/static/media/EuclidCircularA-Regular.d54600880dc63db716f2.ttf",
     "static/media/3.svg": "/samokat-art/static/media/3.1266a31eca97be7da5c08ceed6816e5d.svg",
@@ -19,12 +22,12 @@
     "static/media/4.svg": "/samokat-art/static/media/4.3b1fb027371d79e75e106fdd166c0174.svg",
     "index.html": "/samokat-art/index.html",
     "static/media/arrow[white].svg": "/samokat-art/static/media/arrow[white].798c4e8808d25081a1bd31a84d7aac3f.svg",
-    "main.c5620f8b.css.map": "/samokat-art/static/css/main.c5620f8b.css.map",
-    "main.cb65199e.js.map": "/samokat-art/static/js/main.cb65199e.js.map",
+    "main.27209875.css.map": "/samokat-art/static/css/main.27209875.css.map",
+    "main.36e4c34d.js.map": "/samokat-art/static/js/main.36e4c34d.js.map",
     "453.8bbe034b.chunk.js.map": "/samokat-art/static/js/453.8bbe034b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5620f8b.css",
-    "static/js/main.cb65199e.js"
+    "static/css/main.27209875.css",
+    "static/js/main.36e4c34d.js"
   ]
 }
