@@ -1,48 +1,121 @@
+.main {
+  background-color: white;
+  border-radius: 28px;
+  padding-bottom: 40px;
+}
+
 .quizContainer {
   width: inherit;
   text-align: center;
   color: white;
-  margin-bottom: 26px;
+  /* margin-bottom: 26px; */
+  /* display: flex;
+  flex-direction: column;
+  gap: 28px; */
+}
+
+.questionBlock {
+  margin-bottom: 28px;
+}
+
+.titleMain {
+  font-family: 'EuclidCircularA-Medium';
+  color: #FF335F;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 2em;
+  padding-top: 28px;
+}
+
+.title {
+  color: #404040;
+  padding-top: 18px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  padding-top: 10px;
+}
+
+.description {
+  padding-top: 10px;
+  width: 80%;
+  padding-left: 10%;
+  margin-bottom: 28px;
+}
+
+/* .question {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+} */
+
+.buttonsRadioContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+} 
+
+.buttonsRadio {
+  font-family: 'EuclidCircularA-Medium';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #404040;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 16px;
+  color: #404040;
+  background-color: white;
 }
 
 .calculateButton {
   height: 40px;
-  border-radius: 10px;
+  width: calc(100vw - 160px);
+  max-width: 378px;
+  border-radius: 50px;
   margin-top: 26px;
   background-color: #FF335F;
   color: white;
   border: none;
   font-size: 16px;
   cursor: pointer;
+  margin-bottom: 28px;
 }
 
-.question {
-  display: flex;
-  gap: 5px;
-  justify-content: center;
+.disclaimer {
+  color: #404040;
 }
 
 .ARScene {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FF7996 100%);
-  height: 60vh;
-  border-radius: 28px;
-  margin-bottom: 40px;
+  /* position: relative; */
 }
 
 .model { 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
+  height: 80vh;
 }
 
 .arButton {
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+  font-family: 'EuclidCircularA-Medium';
   cursor: pointer;
   font-size: 16px;
+  height: 40px;
+  width: 100%;
+  margin: auto;
+  border: none;
+  color: #FF335F;
+  border-radius: 30px;
+  background-color: white;
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 30px);
+  left: 15px;
 }
 
 .arButton:hover {

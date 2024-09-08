@@ -1,153 +1,142 @@
-import React, { useState } from 'react';
-
+import { useState, useEffect } from 'react';
 import '@google/model-viewer';
 
 import styles from './ARScene.module.css';
 
-import ar1And from './../../images/ar-models/AR1.glb';
-import ar1IOs from './../../images/ar-models/AR1.usdz';
-import ar2And from './../../images/ar-models/AR2.glb';
-import ar2IOs from './../../images/ar-models/AR2.usdz';
-import ar3And from './../../images/ar-models/AR3.glb';
-import ar3IOs from './../../images/ar-models/AR3.usdz';
-import ar4And from './../../images/ar-models/AR3.glb';
-import ar4IOs from './../../images/ar-models/AR3.usdz';
+// DRY
+// import ar1And from './../../images/ar-models/AR1.glb';
+// import ar1IOs from './../../images/ar-models/AR1.usdz';
+// import ar2And from './../../images/ar-models/AR2.glb';
+// import ar2IOs from './../../images/ar-models/AR2.usdz';
+// import ar3And from './../../images/ar-models/AR3.glb';
+// import ar3IOs from './../../images/ar-models/AR3.usdz';
+// import ar4And from './../../images/ar-models/AR3.glb';
+// import ar4IOs from './../../images/ar-models/AR3.usdz';
+
+import ARModelSelector from '../../utils/ARModelSelector.js';
 
 const ARScene = () => {
-  const [answers, setAnswers] = useState({ q1: 0, q2: 0, q3: 0, q4: 0}); // Инициализация ответов по умолчанию (не выбраны)
-  const [showAR, setShowAR] = useState(false); // Управляет отображением AR сцены
-  const [arModel, setArModel] = useState({ android: ar4And, ios: ar4IOs }); // Модель по умолчанию
-
-  // Функция для обновления ответа и вычисления AR модели
-  const handleAnswerChange = (question, answer) => {
-    const updatedAnswers = { ...answers, [question]: answer };
-    setAnswers(updatedAnswers);
-  };
-
-  // Логика для вычисления AR модели на основе ответов
-  const calculateARModel = () => {
-    const { q1, q2, q3, q4 } = answers;
-    let selectedModel = { android: ar1And, ios: ar1IOs }; // Модель по умолчанию
-
-    // Логика для выбора модели
-    const combination = `${q1}${q2}${q3}${q4}`;
-
-    switch (combination) {
-      case '1111':
-        selectedModel = { android: ar1And, ios: ar1IOs };
-        break;
-      case '2222':
-        selectedModel = { android: ar2And, ios: ar2IOs };
-        break;
-      case '3333':
-        selectedModel = { android: ar3And, ios: ar3IOs };
-        break;
-      default:
-        selectedModel = { android: ar4And, ios: ar4IOs };
+  // console.log(ARModelSelector); 
+  const [answers, setAnswers] = useState({ q1: 0, q2: 0, q3: 0, q4: 0 });
+  const [showAR, setShowAR] = useState(false);
+  const [arModel, setArModel] = useState({ android: '', ios: '' });
+  
+  useEffect(() => {
+    if (arModel.android || arModel.ios) {
+      setShowAR(true);
     }
+  }, [arModel]);
 
-    setArModel(selectedModel);
-    setShowAR(true); // Отображение AR сцены после расчета
+
+  const handleAnswerChange = (question, answer) => {
+    setAnswers(prev => ({ ...prev, [question]: answer }));
   };
 
-  // Проверка, выбраны ли все ответы (включает q4)
+  const calculateARModel = () => {
+    const combination = Object.values(answers).join('');
+    const selectedModel = ARModelSelector(combination);
+    setArModel(selectedModel);
+    setShowAR(true);
+  };
+
   const allQuestionsAnswered = Object.values(answers).every(answer => answer !== 0);
 
 
+  // DRY
+  const selectedStyle = {
+    backgroundColor: '#FF335F',
+    borderColor: '#FF335F',
+    color: 'white',
+  };
+
+  const RadioButtons = ({ question }) => (
+    <div className={styles.buttonsRadioContainer}>
+      {[1, 2, 3].map((value) => (
+        <label key={value}>
+          <input
+            type="radio"
+            name={question}
+            value={value}
+            checked={answers[question] === value}
+            onChange={() => handleAnswerChange(question, value)}
+            style={{ display: 'none' }}
+          />
+          <span className={styles.buttonsRadio} style={{
+            ...(answers[question] === value ? selectedStyle : {}),
+          }}>
+            {value}
+          </span>
+        </label>
+      ))}
+    </div>
+  );
+
+  const stations = [
+    { title: 'Станция 1', question: 'q1',subtitle: 'АРОМАТЫ', description: 'Какой из трёх запахов больше вам подходит?' },
+    { title: 'Станция 2', question: 'q2', subtitle: 'ЗВУКИ', description: 'Какая из трёх композиций вам близка?'},
+    { title: 'Станция 3', question: 'q3', subtitle: 'ОЩУЩЕНИЯ', description: 'Какое тактильное ощущение вам больше нравится?' },
+    { title: 'Станция 4', question: 'q4', subtitle: 'ЗРЕНИЕ/ВКУС',description: 'Какой вкус вы больше любите? И какой визуальный образ лучше всего к нему подходит?' },
+  ];
+
   return (
-    <div>
+    <div className={styles.main}>
       <div className={styles.quizContainer}>
-        <h2>Станция 1</h2>
-        <div className={styles.question}>
-          <label>
-            <input type="radio" name="q1" value={1} checked={answers.q1 === 1} onChange={() => handleAnswerChange('q1', 1)} placeholder='1' />
-          </label>
-          <label>
-            <input type="radio" name="q1" value={2} checked={answers.q1 === 2} onChange={() => handleAnswerChange('q1', 2)} />
-            2
-          </label>
-          <label>
-            <input type="radio" name="q1" value={3} checked={answers.q1 === 3} onChange={() => handleAnswerChange('q1', 3)} />
-            3
-          </label>
-        </div>
 
-        <h2>Станция 2</h2>
-        <div className={styles.question}>
-          <label>
-            <input type="radio" name="q2" value={1} checked={answers.q2 === 1} onChange={() => handleAnswerChange('q2', 1)} />
-            1
-          </label>
-          <label>
-            <input type="radio" name="q2" value={2} checked={answers.q2 === 2} onChange={() => handleAnswerChange('q2', 2)} />
-            2
-          </label>
-          <label>
-            <input type="radio" name="q2" value={3} checked={answers.q2 === 3} onChange={() => handleAnswerChange('q2', 3)} />
-            3
-          </label>
-        </div>
+        <h1 className={styles.titleMain}>АНКЕТА</h1>
+        
+        {stations.map(({ title, subtitle, question, description }) => (
+          <div className={styles.questionBlock} key={question}>
+            <h2 className={styles.title}>{title}</h2>
+            {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+            {description && <p className={styles.description}>{description}</p>}
+            <RadioButtons question={question} />
+          </div>
+        ))}
 
-        <h2>Станция 3</h2>
-        <div className={styles.question}>
-          <label>
-            <input type="radio" name="q3" value={1} checked={answers.q3 === 1} onChange={() => handleAnswerChange('q3', 1)} />
-            1
-          </label>
-          <label>
-            <input type="radio" name="q3" value={2} checked={answers.q3 === 2} onChange={() => handleAnswerChange('q3', 2)} />
-            2
-          </label>
-          <label>
-            <input type="radio" name="q3" value={3} checked={answers.q3 === 3} onChange={() => handleAnswerChange('q3', 3)} />
-            3
-          </label>
-        </div>
-
-        <h2>Станция 4</h2>
-        <div className={styles.question}>
-          <label>
-            <input type="radio" name="q4" value={1} checked={answers.q4 === 1} onChange={() => handleAnswerChange('q4', 1)} />
-            1
-          </label>
-          <label>
-            <input type="radio" name="q4" value={2} checked={answers.q4 === 2} onChange={() => handleAnswerChange('q4', 2)} />
-            2
-          </label>
-          <label>
-            <input type="radio" name="q4" value={3} checked={answers.q4 === 3} onChange={() => handleAnswerChange('q4', 3)} />
-            3
-          </label>
-        </div>
-
-        {/* Кнопка "Рассчитать", которая активируется, когда все вопросы будут отвечены */}
         <button
           className={styles.calculateButton}
           onClick={calculateARModel}
-          disabled={!allQuestionsAnswered} // Отключена, если не все ответы даны
+          disabled={!allQuestionsAnswered}
         >
           Рассчитать
         </button>
+
+        <p className={styles.disclaimer}></p>
       </div>
 
-      {/* Плавное появление AR сцены после расчета */}
       {showAR && (
         <div className={styles.ARScene} style={{ opacity: showAR ? 1 : 0, transition: 'opacity 1s' }}>
           <model-viewer
-            className={styles.modelImg}
-            src={arModel.android} // Динамическая подгрузка модели на Android
-            ios-src={arModel.ios} // Динамическая подгрузка модели на iOS
+            className={styles.model}
+            src={arModel.android}
+            ios-src={arModel.ios}
             alt="A 3D model"
             ar
             ar-modes="scene-viewer quick-look webxr"
             camera-controls
             touch-action="pan-y"
-            max-camera-orbit="auto auto auto"
-            style={{ width: '80%', height: '80%', margin: '0 auto', paddingTop: '10%' }}
+            max-camera-orbit="auto 90deg auto"
+            ar-scale="auto"
+            xr-environment
+            shadow-intensity="2" 
+            auto-rotate 
+            disable-pan
+            style={{ 
+              width: '80%', 
+              height: '75vh',
+              margin: '0 auto', 
+              paddingTop: '10%', 
+              backgroundImage: 'radial-gradient(circle, #FF335F 0%, #FFFFFF 100%)',
+              borderRadius: '28px',
+              border: '2px solid #FF335F'
+            }}
+            onError={() => alert('К сожалению, AR не поддерживается на этом устройстве или браузере.')}
+            onLoad={() => console.log('Model loaded successfully.')}
           >
             <button slot="ar-button" className={styles.arButton}>
-              👋 Activate AR
+              Запустить AR 
             </button>
+            {/* <div id="error" class="hide">К сожалению AR не поддерживается этим устройством 🥲</div> */}
           </model-viewer>
         </div>
       )}

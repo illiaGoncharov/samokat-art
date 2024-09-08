@@ -5,10 +5,12 @@ import Preloader from '../../components/preloader/Preloader';
 
 import style from './Quiz.module.css';
 
+import bg from "./../../images/bg/quiz.jpg";
+import crazyBorder from "./../../images/bg/crazyBorder.png";
+
 function Quiz() {
   const [isLoading, setIsLoading] = useState(true); 
   
-  // Функция завершения прелоадера
   const handlePreloaderFinish = () => {
     setIsLoading(false);
   };
@@ -19,7 +21,11 @@ function Quiz() {
         {isLoading ? (
           <Preloader onFinish={handlePreloaderFinish} />
         ) : (
-          <ARScene />
+          <>
+            <img src={bg}  className={style.bg} alt="" />
+            <img src={crazyBorder} className={style.crazyBorder} alt="" />
+            <ARScene />
+          </>
         )}
       </div>
     </>
