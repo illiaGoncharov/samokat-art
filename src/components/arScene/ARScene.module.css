@@ -8,10 +8,6 @@
   width: inherit;
   text-align: center;
   color: white;
-  /* margin-bottom: 26px; */
-  /* display: flex;
-  flex-direction: column;
-  gap: 28px; */
 }
 
 .questionBlock {
@@ -43,12 +39,6 @@
   padding-left: 10%;
   margin-bottom: 28px;
 }
-
-/* .question {
-  display: flex;
-  gap: 5px;
-  justify-content: center;
-} */
 
 .buttonsRadioContainer {
   display: flex;
@@ -88,10 +78,6 @@
 
 .disclaimer {
   color: #404040;
-}
-
-.ARScene {
-  /* position: relative; */
 }
 
 .model { 

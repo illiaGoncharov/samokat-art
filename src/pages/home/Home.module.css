@@ -3,3 +3,353 @@
   color: white;
   font-size: 36px;
 }
+
+.preloader  {
+  width: 300px;
+  height: 300px;
+  margin: 60px auto;
+}
+
+.preloader img {
+  width: inherit;
+}
+
+.heading {
+  font-family: 'EuclidCircularA-Medium';
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 58.33px;
+  text-align: left;
+  /* color: #404040; */
+  color: white;
+  width: calc(100vw - 40px);
+  padding-left: 20px;
+}
+
+.downArrow {
+  width: 100%;
+  margin: 46px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: calc(100vw - 40px);
+  padding-left: 20px;
+  max-width: 374px;
+}
+
+.introText {
+  color: white;
+  font-family: 'EuclidCircularA-Regular';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.36px;
+  text-align: left;
+}
+
+.info {
+  padding-top: 100px;
+  width: calc(100vw - 40px);
+  padding-left: 20px;
+  max-width: 374px;
+}
+
+.infoHeading {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 27.9px;
+  text-align: left;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.infoBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.infoBlockText {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 27.9px;
+}
+
+.infoBlockTextOther {
+  color: white;
+  font-size: 18px;
+  font-family: 'EuclidCircularA-Regular';
+  font-weight: 400;
+  line-height: 20.29px;
+}
+
+.navigation {
+  padding-top: 160px;
+  width: calc(100vw - 40px);
+  margin: 0 auto;
+  max-width: 374px;
+}
+
+.navigationHeading {
+  font-size: 51px;
+  font-weight: 500;
+  line-height: 64.67px;
+  padding-bottom: 40px;
+}
+
+.navigationList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 14px;
+}
+
+.navigationListItem {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 27.9px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+
+  /* width: calc(100vw - 20px);
+  max-width: 371px;
+  margin-left: -15px; */
+
+}
+/* 
+@media (min-width: 768px) {
+  .navigationListItem {
+    width: 100%;
+    max-width: 371px;
+    margin-left: initial;
+  }
+  
+} */
+
+.navigationListItem a,
+.navigationListItem span {
+  color: #FF335F;
+}
+
+.navigationListItem:hover {
+  opacity: .9;
+}
+
+.navigationListItem span {
+  font-family: 'EuclidCircularA-Regular';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
+}
+
+.mainInfoContainer {
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+.mainInfoWhite {
+  position: relative;  
+  
+}
+
+.whiteGradient {
+  background: linear-gradient(180deg, #FF335F 0px, #FFFFFF 500px);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: calc(100vw);
+  max-width: 374px;
+  z-index: -1;
+}
+
+.sensorLandscape {
+  margin-top: 100px;
+}
+
+.mainInfoWhiteHeading {
+  font-family: 'EuclidCircularA-Medium';
+  color: #404040;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 35.5px;
+  padding-top: 180px;
+}
+
+.mainInfoWhiteSubheading {
+  color: #404040;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 27.9px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.mainInfoWhiteSubheading span {
+  font-family: 'EuclidCircularA-Regular';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
+}
+
+.infoBlockOther {
+  padding-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.infoBlockOther .infoBlockText {
+  color: #FF335F;
+  font-size: 16px;
+  font-family: 'EuclidCircularA-Regular';
+  font-weight: 400;
+  line-height: 20.29px;
+}
+
+.mainInfoImg {
+  width: 100%;
+}
+
+.mainInfoWhiteText {
+  font-family: 'EuclidCircularA-Regular';
+  color: #404040;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.36px;
+}
+
+.flowArtist {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.flowArtistText {
+  color: #FF335F;
+  font-size: 16px;
+  font-family: 'EuclidCircularA-Regular';
+  font-weight: 400;
+  line-height: 20.29px;
+   padding-left: 20px;
+  padding-right: 20px;
+}
+
+.flowArtistCredits {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
+   padding-left: 20px;
+  padding-right: 20px;
+}
+
+.flowArtistCredits p:nth-child(2) {
+  font-family: 'EuclidCircularA-Regular';
+  color: #FF335F;
+}
+
+.backToMenuPinkContainer {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+}
+
+.backToMenuPink {
+  font-family: 'EuclidCircularA-Medium';
+  color: #FF335F;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38.04px;
+  text-decoration: underline;
+  margin: 0 auto;
+  /* Меняем */
+  padding-bottom: 75px;
+}
+
+.artOfResearch {
+  background-color: #FF335F;
+  border-radius: 28px;
+  /* Меняем */
+  margin-top: 75px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.artOfResearchHeading {
+  font-family: 'EuclidCircularA-Medium';
+  padding-top: 42px;
+
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 35.5px;
+}
+
+.artOfResearchSubheading {
+  font-family: 'EuclidCircularA-Regular';
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
+  padding-top: 10px;
+}
+
+.artOfResearchText {
+  font-family: 'EuclidCircularA-Regular';
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.36px;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.artOfResearchButtonContainer {
+  width: 100%;
+  display: flex;
+}
+
+.artOfResearchButton {
+  font-family: 'EuclidCircularA-Regular';
+  color: #FF335F;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 50px;
+  border: none;
+  min-width: 300px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.artOfResearchButton:hover {
+  opacity: .9;
+}

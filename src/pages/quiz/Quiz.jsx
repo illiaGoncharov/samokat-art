@@ -19,7 +19,12 @@ function Quiz() {
     <>
       <div className={style.quiz}>
         {isLoading ? (
-          <Preloader onFinish={handlePreloaderFinish} />
+          <Preloader 
+              onFinish={handlePreloaderFinish} 
+              intervalSpeed={500}
+              loop={false} // Прелоадер завершится
+              isBackground={false} // Это обычный прелоадер
+          />
         ) : (
           <>
             <img src={bg}  className={style.bg} alt="" />

@@ -17,7 +17,6 @@ const ApplicationView = () => {
     <>
       <AppHeader />
       <Routes>
-        {/* Это для GH, нужно потом убрать! */} 
         <Route path="/" exact element={<Home />} />
         <Route path="/samokat-cards" element={<Cards />} />
         <Route path="/laboratoryff335f" element={<Quiz />} />

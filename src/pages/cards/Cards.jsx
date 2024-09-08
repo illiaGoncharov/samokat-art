@@ -103,7 +103,14 @@ function Cards() {
   return (
     <div className={styles.cards}>
       {/* Прелоадер */}
-      {isPreloading && <Preloader onFinish={handlePreloaderFinish} />}
+      {isPreloading && 
+        <Preloader 
+          onFinish={handlePreloaderFinish} 
+          intervalSpeed={500}
+          loop={false} // Прелоадер завершится
+          isBackground={false} // Это обычный прелоадер
+        />
+      }
       {/* Карточки с инструкциями */}
       {showInstructions && <InstructionCards onFinish={handleInstructionsFinish} />}
       {/* Кнопка "Начать" после инструкций */}
