@@ -1,6 +1,11 @@
 import Preloader from "./../../components/preloader/Preloader";
 
 import arrowWhite from './../../media/ui/arrow[white].svg';
+import sun from "./../../media/cakes/1.jpg";
+import onisan from "./../../media/cakes/1.jpg";
+import cube from "./../../media/cakes/1.jpg";
+import taiga from "./../../media/cakes/1.jpg";
+import flower from "./../../media/cakes/1.jpg";
 
 import styles from "./Cakes.module.css";
 
@@ -31,7 +36,21 @@ function Cakes() {
           Попробовать пирожные можно в нашем кафе на ярмарке. Ещё некоторые из десертов есть в приложении Самоката. 
           </p>
         </div>
-        
+        <div className={`${styles.cakesContainer} ${styles.cakes}`}>
+          <div className={styles.whiteGradient}></div>
+          <div className={styles.cakeContainer}>
+            <h3 className={styles.cakeHeading}>Коин <br />«Солнечное поле» </h3>
+            <img className={styles.cakeImg} src={sun} alt="" />
+            <div className={styles.cakeTextContainer}>
+              <p className={styles.cakeText}>
+                <span>
+                  Слоёное тесто, кули из земляники, ванильный крем шантильи
+                </span>
+                  Сладкий запах нагретой солнцем травы, шум рощи вдалеке и едва слышная свирель — это путешествие даёт вдохнуть полной грудью и вглядеться в горизонт за летним лугом.              
+                </p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )

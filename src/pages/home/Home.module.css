@@ -124,23 +124,10 @@
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 30px;
+  padding-right: 30px;
   border-radius: 50px;
   cursor: pointer;
-
-  /* width: calc(100vw - 20px);
-  max-width: 371px;
-  margin-left: -15px; */
-
 }
-/* 
-@media (min-width: 768px) {
-  .navigationListItem {
-    width: 100%;
-    max-width: 371px;
-    margin-left: initial;
-  }
-  
-} */
 
 .navigationListItem a,
 .navigationListItem span {
@@ -165,22 +152,25 @@
 }
 
 .mainInfoWhite {
-  position: relative;  
-  
+  position: relative;   
 }
 
 .whiteGradient {
-  background: linear-gradient(180deg, #FF335F 0px, #FFFFFF 500px);
+  /* background: linear-gradient(180deg, #FF335F 0px, #FFFFFF 40%, #FF335F 100%); */
+   background: linear-gradient(
+    180deg,
+    #FF335F 0%,     /* Начинаем с розового */
+    #FFFFFF 15%,    /* Быстрый переход к белому */
+    #FFFFFF 90%,    /* Белый остается до 90% высоты */
+    #FF335F 95%,    /* Быстрый переход обратно к розовому */
+    #FF335F 100%    /* Заканчиваем розовым */
+  );
   position: absolute;
   top: 0;
   height: 100%;
   width: calc(100vw);
   max-width: 374px;
   z-index: -1;
-}
-
-.sensorLandscape {
-  margin-top: 100px;
 }
 
 .mainInfoWhiteHeading {
@@ -207,6 +197,11 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 20.29px;
+}
+
+.sensorLandscape {
+  margin-top: 100px;
+  padding-bottom: 200px;
 }
 
 .infoBlockOther {
@@ -287,19 +282,220 @@
   padding-bottom: 75px;
 }
 
+
+.backToMenuWhiteContainer {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+}
+
+.backToMenuWhite {
+  font-family: 'EuclidCircularA-Medium';
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38.04px;
+  text-decoration: underline;
+  margin: 0 auto;
+  padding-bottom: 75px;
+}
+
+.samokatCafe {
+  width: calc(100% - 40px);
+  padding-left: 20px;
+}
+
+.samokatCafeHeading {
+  font-family: 'EuclidCircularA-Medium';
+  color: white; 
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 35.5px;
+}
+
+.samokatCafe .infoBlockText {
+  color: white; 
+}
+
+.samokatCafeText {
+  font-family: 'EuclidCircularA-Regular';
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.36px;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.soundLandscapes {
+  width: calc(100% - 40px);
+  padding-left: 20px;
+}
+
+.soundLandscapesHeading {
+  font-family: 'EuclidCircularA-Medium';
+  color: white; 
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 35.5px;
+}
+
+.soundLandscapesSubheading {
+  padding-top: 10px;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 27.9px;
+}
+
+.soundLandscapes .infoBlockText {
+  color: white; 
+}
+
+.soundLandscapesImg {
+  margin-top: 50px;
+}
+
+.soundLandscapesText {
+  font-family: 'EuclidCircularA-Regular';
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.36px;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.soundLandscapesContainer {
+  width: 100%;
+  display: flex;
+}
+
+.soundLandscapesButton {
+  font-family: 'EuclidCircularA-Regular';
+  color: #FF335F;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 50px;
+  border: none;
+  min-width: 300px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+  text-align: left;
+}
+
+.soundLandscapesButton:hover {
+  opacity: .9;
+}
+
+.mariaFedorova {
+  position: relative;
+  padding-bottom: 350px;
+}
+
+.mariaFedorovaContainer {
+  padding-left: 20px;
+  padding-right: 20px; 
+}
+
+.mariaFedorovaHeading {
+  font-family: 'EuclidCircularA-Medium';
+  color: #404040;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 35.5px;
+  padding-top: 180px;
+}
+
+.mariaFedorovaSubheading {
+  color: #404040;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 27.9px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.mariaFedorovaSubheading span {
+  font-family: 'EuclidCircularA-Regular';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
+}
+
+.mariaFedorovaImg {
+  padding-top: 30px;
+  width: 100%;
+}
+
+.mariaFedorovaText {
+  font-family: 'EuclidCircularA-Regular';
+  color: #404040;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.36px;
+  padding-top: 40px;
+}
+
+.mariaArtist {
+  padding-top: 0px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mariaArtistText {
+  color: #FF335F;
+  font-size: 16px;
+  font-family: 'EuclidCircularA-Regular';
+  font-weight: 400;
+  line-height: 20.29px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mariaArtistCredits {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mariaArtistCredits p:nth-child(2) {
+  font-family: 'EuclidCircularA-Regular';
+  color: #FF335F;
+}
+
+
 .artOfResearch {
+  width: calc(100% - 40px);
+  margin: auto;
   background-color: #FF335F;
   border-radius: 28px;
-  /* Меняем */
   margin-top: 75px;
   padding-left: 20px;
   padding-right: 20px;
+  box-sizing: border-box;
+  padding-bottom: 60px;
 }
 
 .artOfResearchHeading {
   font-family: 'EuclidCircularA-Medium';
   padding-top: 42px;
-
   font-size: 28px;
   font-weight: 500;
   line-height: 35.5px;

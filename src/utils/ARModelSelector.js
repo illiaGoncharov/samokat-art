@@ -1,4 +1,4 @@
-import ar1And from './../media/ar-models/AR1.glb';
+import ar1And from './../media/ar-models/glb/1.glb';
 import ar1IOs from './../media/ar-models/AR1.usdz';
 import ar2And from './../media/ar-models/AR2.glb';
 import ar2IOs from './../media/ar-models/AR2.usdz';

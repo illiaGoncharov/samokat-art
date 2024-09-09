@@ -2,7 +2,7 @@
   font-family: 'EuclidCircularA-Medium';
   color: white;
   font-size: 36px;
-  max-width: 378px;
+  max-width: 374px;
   margin: 0 auto;
 }
 
@@ -24,6 +24,9 @@
   text-align: left;
   /* color: #404040; */
   color: white;
+  width: calc(100vw - 40px);
+  margin: 0 auto;
+  max-width: 374px;
 }
 
 .downArrow {
@@ -46,4 +49,58 @@
   font-weight: 400;
   line-height: 25.36px;
   text-align: left;
+  width: calc(100vw - 40px);
+  margin: 0 auto;
+  max-width: 374px;
+}
+
+.cakesContainer {
+  position: relative;   
+}
+
+.whiteGradient {
+  background: linear-gradient(180deg, #FF335F 0px, #FFFFFF 500px);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: calc(100vw);
+  max-width: 374px;
+  z-index: -1;
+}
+
+.cakeContainer {
+  padding-top: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cakeHeading {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38.04px;
+}
+
+.cakeImg {
+  width: 100%;
+}
+
+.cakeTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} 
+
+.cakeText span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25.36px;
+}
+
+.cakeText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
 }

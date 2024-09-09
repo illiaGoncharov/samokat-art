@@ -32,11 +32,10 @@ function Menu() {
         <p className={styles.intro}>
            <p className={styles.introText}>Пожалуйста, проверьте новую вкладку для просмотра меню в PDF.</p>
         </p>
-
-          {/* Кнопка "Назад" */}
+        {/* Кнопка "Назад" */}
         <button 
-          className={styles.returnButton}  // Стили для кнопки
-          onClick={() => navigate(-1)}    // Возвращаемся на предыдущую страницу
+          className={styles.returnButton}  
+          onClick={() => navigate(-1)}    // Возвращаемся на предыдущую 
         >
           Назад
         </button>
