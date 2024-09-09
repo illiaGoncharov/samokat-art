@@ -1,6 +1,6 @@
 import Preloader from "./../../components/preloader/Preloader";
 
-import arrowWhite from './../../images/ui/arrow[white].svg';
+import arrowWhite from './../../media/ui/arrow[white].svg';
 
 import styles from "./Cakes.module.css";
 

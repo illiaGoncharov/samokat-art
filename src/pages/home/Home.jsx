@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 
 import Preloader from "./../../components/preloader/Preloader";
 
-import arrowWhite from './../../images/ui/arrow[white].svg';
-import arrowPink from './../../images/ui/arrow[pink].svg';
-import calendar from './../../images/ui/calendar.svg';
-import map from './../../images/ui/map.svg';
-import mapPink from './../../images/ui/map[pink].svg';
-import mainSensorLandscape from './../../images/bg/mainSensorLandscape.png';
-import flowArtist from './../../images/bg/flowArtist.jpg';
+import arrowWhite from './../../media/ui/arrow[white].svg';
+import arrowPink from './../../media/ui/arrow[pink].svg';
+import calendar from './../../media/ui/calendar.svg';
+import map from './../../media/ui/map.svg';
+import mapPink from './../../media/ui/map[pink].svg';
+import mainSensorLandscape from './../../media/bg/mainSensorLandscape.png';
+import flowArtist from './../../media/bg/flowArtist.jpg';
 
 import styles from "./Home.module.css";
 

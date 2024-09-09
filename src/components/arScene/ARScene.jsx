@@ -4,14 +4,14 @@ import '@google/model-viewer';
 import styles from './ARScene.module.css';
 
 // DRY
-// import ar1And from './../../images/ar-models/AR1.glb';
-// import ar1IOs from './../../images/ar-models/AR1.usdz';
-// import ar2And from './../../images/ar-models/AR2.glb';
-// import ar2IOs from './../../images/ar-models/AR2.usdz';
-// import ar3And from './../../images/ar-models/AR3.glb';
-// import ar3IOs from './../../images/ar-models/AR3.usdz';
-// import ar4And from './../../images/ar-models/AR3.glb';
-// import ar4IOs from './../../images/ar-models/AR3.usdz';
+// import ar1And from './../../media/ar-models/AR1.glb';
+// import ar1IOs from './../../media/ar-models/AR1.usdz';
+// import ar2And from './../../media/ar-models/AR2.glb';
+// import ar2IOs from './../../media/ar-models/AR2.usdz';
+// import ar3And from './../../media/ar-models/AR3.glb';
+// import ar3IOs from './../../media/ar-models/AR3.usdz';
+// import ar4And from './../../media/ar-models/AR3.glb';
+// import ar4IOs from './../../media/ar-models/AR3.usdz';
 
 import ARModelSelector from '../../utils/ARModelSelector.js';
 
@@ -124,6 +124,7 @@ const ARScene = () => {
             style={{ 
               width: '80%', 
               height: '75vh',
+              maxHeight: '600px',
               margin: '0 auto', 
               paddingTop: '10%', 
               backgroundImage: 'radial-gradient(circle, #FF335F 0%, #FFFFFF 100%)',

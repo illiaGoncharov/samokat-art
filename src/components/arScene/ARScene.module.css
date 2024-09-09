@@ -85,7 +85,8 @@
   display: flex;
   justify-content: center;
   align-items: baseline;
-  height: 80vh;
+  /* height: 80vh;
+  max-height: 600px; */
 }
 
 .arButton {

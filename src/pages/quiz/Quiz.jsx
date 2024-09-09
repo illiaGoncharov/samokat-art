@@ -5,8 +5,8 @@ import Preloader from '../../components/preloader/Preloader';
 
 import style from './Quiz.module.css';
 
-import bg from "./../../images/bg/quiz.jpg";
-import crazyBorder from "./../../images/bg/crazyBorder.png";
+import bg from "./../../media/bg/quiz.jpg";
+import crazyBorder from "./../../media/bg/crazyBorder.png";
 
 function Quiz() {
   const [isLoading, setIsLoading] = useState(true); 

@@ -2,4 +2,54 @@
   font-family: 'EuclidCircularA-Medium';
   color: white;
   font-size: 36px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.preloader  {
+  width: 300px;
+  height: 300px;
+  margin: 60px auto;
+}
+
+.preloader img {
+  width: inherit;
+}
+
+.heading {
+  font-family: 'EuclidCircularA-Medium';
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 58.33px;
+  text-align: left;
+  color: white;
+  width: calc(100vw - 40px);
+  padding-left: 20px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 374px;
+  padding-bottom: 25px;
+}
+
+.introText {
+  color: white;
+  font-family: 'EuclidCircularA-Regular';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.36px;
+  text-align: left;
+}
+
+.returnButton {
+  height: 40px;
+  width: 100%;
+  margin: auto;
+  border: none;
+  color: #FF335F;
+  border-radius: 30px;
+  background-color: white;
 }

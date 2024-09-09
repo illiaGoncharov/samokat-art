@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 
-import arrowWhite from './../../images/ui/arrow[white].svg';
+import arrowWhite from './../../media/ui/arrow[white].svg';
 import styles from './InstructionCards.module.css';
 
 const instructions = [

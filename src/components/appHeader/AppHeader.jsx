@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './AppHeader.module.css';
 
-import logoSamokatBlazarWhite from './../../images/logos/samokat-blazar[white].svg';
+import logoSamokatBlazarWhite from './../../media/logos/samokat-blazar[white].svg';
 
 function AppHeader() {
   return (
@@ -14,12 +14,18 @@ function AppHeader() {
               src={logoSamokatBlazarWhite} />
         </Link>
         {/* { process.env.NODE_ENV === 'development' && ( */}
-          <div className={styles.navbar}>
-            <Link to="/samokat-cards" className={styles.links}><div>Карточки</div></Link>
-            <Link to="/laboratoryff335f" className={styles.links}><div>Анкета</div></Link>
-            {/* <Link to="/samokat-sound-desserts" className={styles.links}><div>Пирожные</div></Link>
-            <Link to="/samokat-cafe-menu" className={styles.links}><div>Меню</div></Link> */}
-          </div>
+          <nav className={styles.navbar}>
+            <Link to="/samokat-cards" className={styles.links}>Карточки</Link>
+            <Link to="/laboratoryff335f" className={styles.links}>Анкета</Link>
+            <Link to="/samokat-sound-desserts" className={styles.links}>Пирожные</Link>
+            <Link to="/samokat-cafe-menu" className={styles.links}>Меню</Link>
+            {/* <a 
+              href="/path-to-your-pdf/file.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.links}
+            >Меню</a> */}
+          </nav>
         {/* )} */}
       </div>
     </>

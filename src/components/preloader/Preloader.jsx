@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-import image1 from '../../images/forms/1.svg';
-import image2 from '../../images/forms/2.svg';
-import image3 from '../../images/forms/3.svg';
-import image4 from '../../images/forms/4.svg';
-import image5 from '../../images/forms/5.svg';
+import image1 from '../../media/forms/1.svg';
+import image2 from '../../media/forms/2.svg';
+import image3 from '../../media/forms/3.svg';
+import image4 from '../../media/forms/4.svg';
+import image5 from '../../media/forms/5.svg';
 
 import styles from './Preloader.module.css';
 
