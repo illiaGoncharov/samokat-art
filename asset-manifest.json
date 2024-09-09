@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/samokat-art/static/css/main.0400daf3.css",
-    "main.js": "/samokat-art/static/js/main.12946e31.js",
+    "main.css": "/samokat-art/static/css/main.acb7db38.css",
+    "main.js": "/samokat-art/static/js/main.68657061.js",
     "static/js/453.8bbe034b.chunk.js": "/samokat-art/static/js/453.8bbe034b.chunk.js",
     "static/media/AR1.usdz": "/samokat-art/static/media/AR1.c19c1622d7674a1d5f46.usdz",
     "static/media/AR4.usdz": "/samokat-art/static/media/AR4.ce452c3c9c0a3990fbcb.usdz",
@@ -35,12 +35,12 @@
     "index.html": "/samokat-art/index.html",
     "static/media/arrow[white].svg": "/samokat-art/static/media/arrow[white].798c4e8808d25081a1bd31a84d7aac3f.svg",
     "static/media/arrow[pink].svg": "/samokat-art/static/media/arrow[pink].58563664e0b7ef7300d8b2737d3060b4.svg",
-    "main.0400daf3.css.map": "/samokat-art/static/css/main.0400daf3.css.map",
-    "main.12946e31.js.map": "/samokat-art/static/js/main.12946e31.js.map",
+    "main.acb7db38.css.map": "/samokat-art/static/css/main.acb7db38.css.map",
+    "main.68657061.js.map": "/samokat-art/static/js/main.68657061.js.map",
     "453.8bbe034b.chunk.js.map": "/samokat-art/static/js/453.8bbe034b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0400daf3.css",
-    "static/js/main.12946e31.js"
+    "static/css/main.acb7db38.css",
+    "static/js/main.68657061.js"
   ]
 }
