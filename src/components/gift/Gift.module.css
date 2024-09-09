@@ -1,0 +1,46 @@
+.giftFooterText {
+  padding-top: 55px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
+}
+
+.giftFooterInputWrapper {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  margin-top: 60px;
+  height: 90px;
+  border: none;
+  border-radius: 100px;
+  padding-left: 32px;
+  padding-right: 32px;
+  position: relative;
+}
+
+.giftFooterInput {
+  font-family: 'EuclidCircularA-Medium';
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 35.5px;
+}
+
+.giftFooterCopyButton {
+  color: #FF335F;
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 32px;
+  top: 35px;
+  cursor: pointer;
+}
+
+.giftFooterCopiedMessage {
+  padding-top: 30px;
+  text-align: center;
+}
+

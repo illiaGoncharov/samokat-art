@@ -17,7 +17,7 @@ const ApplicationView = () => {
     <>
       <AppHeader />
       <Routes>
-        <Route path="/" exact element={<Home />} />
+        <Route path="/samokat-art" exact element={<Home />} />
         <Route path="/samokat-cards" element={<Cards />} />
         <Route path="/laboratoryff335f" element={<Quiz />} />
         <Route path="/samokat-sound-desserts" element={<Cakes />} />

@@ -1,27 +1,27 @@
 import { Link } from 'react-router-dom';
 
 import Preloader from "./../../components/preloader/Preloader";
+import Gift from "./../../components/gift/Gift";
 
 import arrowWhite from './../../media/ui/arrow[white].svg';
 import arrowPink from './../../media/ui/arrow[pink].svg';
 import calendar from './../../media/ui/calendar.svg';
 import map from './../../media/ui/map.svg';
 import mapPink from './../../media/ui/map[pink].svg';
-
 import mainSensorLandscape from './../../media/bg/mainSensorLandscape.png';
 import soundLandscapes from './../../media/bg/soundLandscapes.jpg';
-
 import mairaOne from './../../media/bg/mairaOne.jpg';
 import mairaTwo from './../../media/bg/mairaTwo.jpg';
-
 import flowArtist from './../../media/bg/flowArtist.jpg';
 import mariaArtist from './../../media/bg/mariaArtist.jpg';
+import footerBiom from './../../media/forms/4.svg';
 
 import styles from "./Home.module.css";
 
 function Home() {
   return (
     <div className={styles.main}>
+      
       <div className={styles.preloader}>
         <Preloader 
           onFinish={''} 
@@ -30,6 +30,7 @@ function Home() {
           isBackground={true} 
         />
       </div>
+
       <h1 className={styles.heading}>
         Привет, <br /> это Самокат!
       </h1>
@@ -38,19 +39,26 @@ function Home() {
       </div>
       <div className={styles.intro}>
         <p className={styles.introText}>
-        В этом году мы стали официальным партнером ярмарки молодого современного искусства blazar! На этой странице рассказываем обо всех наших проектах, в рамках события и художников, работы, которых вдохновили нас на коллаборацию и, надеемся, станут для вас увлекательным путешествием к себе, своим ощущениям, новым, необычным и увлекательным опытом. 
+          На ярмарке молодого современного искусства blazar мы поддержали несколько художественных проектов и создали кафе, где можно выпить кофе с арт-пирожным и обменяться впечатлениями.
         </p>
-        <p className={styles.introText}>
-        Общей темой нашего присутствия на ярмарке стала фантазия о том, какими будут технологичные сервисы будущего и как наше сознание существует сразу в нескольких мирах – виртуальном и физическом, граница между которыми, в будущем будет почти стерта.
+        <p className={styles.introText}>       
+          Поиск вдохновения в современном мире, возможность заглянуть внутрь себя и симбиоз реальности и цифровых технологий — вот главные темы путешествия, в которое мы предлагаем отправиться в рамках наших проектов на ярмарке. 
+        </p>
+        <p className={styles.introText}>       
+          Команда художников Flowgardenz создала миры, которые существуют на стыке физических объектов, вкусовых ощущений и музыкальных композиций. А в нашем кафе есть дополнение к инсталляции — коллекция десертов, которые мы разработали совместно с художниками. 
+        </p>
+        <p className={styles.introText}>       
+          Мария Федорова в воображаемой лаборатории предлагает зрителям прислушаться к собственным внутренним ощущениям. Чтобы продолжить исследование, мы подготовили карточки с вопросами. Они помогут начать разговор о том, есть ли у искусства какие-либо границы.
         </p>
       </div>
+
       <div className={styles.info}>
-        <p className={styles.infoHeading}>Время работы ярмарки blazar:</p>
+        <p className={styles.infoHeading}>Как работает ярмарка:</p>
         <div className={styles.infoBlock}>
           <img className={styles.infoBlockImg}src={calendar} alt="" />
           <p className={styles.infoBlockText}>
-            12 – 15 сентября, <br /> 
-            11:00–21:00
+            12–15 сентября,  <br /> 
+            с 11:00 по 21:00
           </p>
         </div>
         <div className={styles.infoBlock}>
@@ -272,17 +280,21 @@ function Home() {
         </div>
       </div>
       
-      {/* <div id="gift" className={styles.giftFooter} >
-        <h3 className={styles.giftFooter}>Вам подарок подарок подарок подарок!</h3>
-         <div className={styles.preloader}>
-          <Preloader 
-            onFinish={''} 
-            intervalSpeed={800}
-            loop={true} 
-            isBackground={true} 
-          />
+      <div id="gift" className={styles.giftFooter} >
+        <h3 className={styles.giftFooterHeading}>Подарок от Самоката!</h3>
+
+        <div className={styles.giftFooterImgContainer}>
+          <img src={footerBiom} alt="" className={styles.giftFooterImg} />
         </div>
-      </div> */}
+
+        <Gift />
+
+        <div className={styles.backToMenuWhiteContainer}>
+          <a href="#navigation" className={styles.backToMenuWhite}>
+            Вернуться к меню
+          </a>
+        </div>
+      </div>
     </div>
   )
 }

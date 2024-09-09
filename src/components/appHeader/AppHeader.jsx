@@ -7,7 +7,7 @@ function AppHeader() {
   return (
     <>
       <div className={styles.header}>
-        <Link to="/">
+        <Link to="/samokat-art/">
           <img 
               className={styles.logo} 
               alt="Логотип" 
