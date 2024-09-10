@@ -20,10 +20,9 @@
   font-weight: 500;
   line-height: 58.33px;
   text-align: left;
-  /* color: #404040; */
   color: white;
-  width: calc(100vw - 40px);
-  padding-left: 20px;
+  width: calc(100% - 40px);
+  margin: auto;
 }
 
 .downArrow {
@@ -37,9 +36,8 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  width: calc(100vw - 40px);
-  padding-left: 20px;
-  max-width: 374px;
+  width: calc(100% - 40px);
+  margin: auto;
 }
 
 .introText {
@@ -53,9 +51,8 @@
 
 .info {
   padding-top: 100px;
-  width: calc(100vw - 40px);
-  padding-left: 20px;
-  max-width: 374px;
+  width: calc(100% - 40px);
+  margin: auto;
 }
 
 .infoHeading {
@@ -95,7 +92,7 @@
 
 .navigation {
   padding-top: 160px;
-  width: calc(100vw - 40px);
+  width: 100%;
   margin: 0 auto;
   max-width: 374px;
 }
@@ -105,6 +102,8 @@
   font-weight: 500;
   line-height: 64.67px;
   padding-bottom: 40px;
+  width: calc(100% - 40px);
+  margin: auto;
 }
 
 .navigationList {
@@ -115,23 +114,26 @@
 }
 
 .navigationListItem {
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 27.9px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27.9px;
   background-color: white;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 35px;
+  padding-right: 35px;
   border-radius: 50px;
   cursor: pointer;
+  height: 50px;
 }
 
 .navigationListItem a,
 .navigationListItem span {
   color: #FF335F;
+  display: block;
 }
 
 .navigationListItem:hover {
@@ -156,7 +158,6 @@
 }
 
 .whiteGradient {
-  /* background: linear-gradient(180deg, #FF335F 0px, #FFFFFF 40%, #FF335F 100%); */
    background: linear-gradient(
     180deg,
     #FF335F 0%,     /* Начинаем с розового */
@@ -231,11 +232,31 @@
   line-height: 25.36px;
 }
 
-.flowArtist {
+.flowArtistContainer {
   padding-top: 100px;
-  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.flowArtistSubheadingPink {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 27.9px;
+  color: #FF335F;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.flowArtistSubheadingBlack {
+  composes: flowArtistSubheadingPink;
+  color: #404040;
+}
+
+.flowArtistImg {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 60%;
 }
 
 .flowArtistText {
@@ -244,18 +265,17 @@
   font-family: 'EuclidCircularA-Regular';
   font-weight: 400;
   line-height: 20.29px;
-   padding-left: 20px;
+  padding-left: 20px;
   padding-right: 20px;
 }
 
 .flowArtistCredits {
-  padding-top: 50px;
   display: flex;
   justify-content: space-between;
   font-size: 16px;
   font-weight: 400;
   line-height: 20.29px;
-   padding-left: 20px;
+  padding-left: 20px;
   padding-right: 20px;
 }
 
@@ -278,10 +298,8 @@
   line-height: 38.04px;
   text-decoration: underline;
   margin: 0 auto;
-  /* Меняем */
   padding-bottom: 75px;
 }
-
 
 .backToMenuWhiteContainer {
   margin-top: 60px;
@@ -302,7 +320,7 @@
 
 .samokatCafe {
   width: calc(100% - 40px);
-  padding-left: 20px;
+  margin: auto;
 }
 
 .samokatCafeHeading {
@@ -330,6 +348,8 @@
 .soundLandscapes {
   width: calc(100% - 40px);
   padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 100px;
 }
 
 .soundLandscapesHeading {
@@ -346,6 +366,13 @@
   font-size: 22px;
   font-weight: 500;
   line-height: 27.9px;
+}
+
+.soundLandscapesSubheading span {
+  font-family: 'EuclidCircularA-Regular';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
 }
 
 .soundLandscapes .infoBlockText {
@@ -399,8 +426,26 @@
 
 .mariaFedorova {
   position: relative;
-  padding-bottom: 350px;
+  padding-bottom: 150px;
 }
+
+.mariaFedorova  .whiteGradient {
+   background: linear-gradient(
+    180deg,
+    #FF335F 0%,     /* Начинаем с розового */
+    #FFFFFF 5%,    /* Быстрый переход к белому */
+    #FFFFFF 90%,    /* Белый остается до 90% высоты */
+    #FFFFFF 95%,    /* Быстрый переход обратно к розовому */
+    #FF335F 100%    /* Заканчиваем розовым */
+  );
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: calc(100vw);
+  max-width: 374px;
+  z-index: -1;
+}
+
 
 .mariaFedorovaContainer {
   padding-left: 20px;
@@ -447,9 +492,14 @@
   padding-top: 40px;
 }
 
+.mariaArtistContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .mariaArtist {
-  padding-top: 0px;
-  padding-bottom: 40px;
+  width: 60%;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -465,7 +515,6 @@
 }
 
 .mariaArtistCredits {
-  padding-top: 50px;
   display: flex;
   justify-content: space-between;
   font-size: 16px;
@@ -550,51 +599,22 @@
 }
 
 .giftFooter {
-
+  width: calc(100% - 40px);
+  margin: auto;
 }
 
 @keyframes pulse {
-  /* 0% {
-    transform: scale(1);
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-  } */
-    /* 0% {
-    transform: scale(1) translate(0, 0);
-  }
-  30% {
-    transform: scale(1.02) translate(2px, -2px);
-  }
-  50% {
-    transform: scale(1) translate(0, 0);
-  }
-  70% {
-    transform: scale(1.02) translate(-2px, 2px);
-  }
-  100% {
-    transform: scale(1) translate(0, 0);
-  } */
   0% {
     filter: brightness(100%);
     transform: scale(1);
-    /* box-shadow: 0 0 10px rgba(255, 153, 51, 0.4); */
   }
   50% {
     filter: brightness(120%);
     transform: scale(1.05);
-    /* box-shadow: 0 0 20px rgba(255, 153, 51, 0.6); */
   }
   100% {
     filter: brightness(100%);
     transform: scale(1);
-    /* box-shadow: 0 0 10px rgba(255, 153, 51, 0.4); */
   }
 }
 
@@ -608,7 +628,85 @@
 }
 
 .giftFooterImg {
+  width: 90%;
+  padding-left: 5%;
   animation: pulse 2s infinite;
   transition: transform 0.2s ease-in-out;
 }
 
+.giftFooterText {
+  font-family: 'EuclidCircularA-Regular';
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.36px;
+  padding-top: 30px;
+}
+
+.creditsFooter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.creditsFooter .whiteGradient {
+  background: linear-gradient(
+    180deg,
+    #FF335F 0%,     /* Начинаем с розового */
+    #FFFFFF 5%,    /* Быстрый переход к белому */
+    #FFFFFF 90%,    /* Белый остается до 90% высоты */
+    #FFFFFF 95%,    /* Быстрый переход обратно к розовому */
+    #FF335F 100%    /* Заканчиваем розовым */
+  );
+}
+
+.creditsFooterText {
+  color: #FF335F;
+  font-size: 16px;
+  font-family: 'EuclidCircularA-Regular';
+  font-weight: 400;
+  line-height: 20.29px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: calc(100% - 40px);
+  margin: auto;
+}
+
+.creditsFooterListHeading {
+  font-family: 'EuclidCircularA-Medium';
+  color: #404040;
+  width: calc(100% - 40px);
+  margin: auto;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 27.9px;
+}
+
+.creditsFooterList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.creditsFooterListItem {
+  width: calc(100% - 40px);
+  margin: auto;
+  color: #404040;
+  font-family: 'EuclidCircularA-Regular';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
+}
+
+.creditsFooterListItem span {
+  color: #FF335F;
+  font-size: 16px;
+  font-family: 'EuclidCircularA-Regular';
+  font-weight: 400;
+  line-height: 20.29px; 
+  display: block;
+}

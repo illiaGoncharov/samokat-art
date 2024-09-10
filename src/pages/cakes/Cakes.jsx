@@ -1,19 +1,99 @@
+import { useState } from "react";
+
 import Preloader from "./../../components/preloader/Preloader";
+import CakeBlock from "./../../components/cakeBlock/CakeBlock";
 
 import arrowWhite from './../../media/ui/arrow[white].svg';
+import arrowPinkBig from './../../media/ui/arrow[pink+big].svg';
+
 import sun from "./../../media/cakes/1.jpg";
-import onisan from "./../../media/cakes/1.jpg";
-import cube from "./../../media/cakes/1.jpg";
-import taiga from "./../../media/cakes/1.jpg";
-import flower from "./../../media/cakes/1.jpg";
+import onisan from "./../../media/cakes/2.jpg";
+import cube from "./../../media/cakes/3.jpg";
+import taiga from "./../../media/cakes/4.jpg";
+import flower from "./../../media/cakes/5.jpg";
+
+import sound1Mp3 from './../../media/sounds/mp3/1-sun.mp3';
+import sound1Ogg from './../../media/sounds/ogg/1-sun.ogg';
+import sound2Mp3 from './../../media/sounds/mp3/2-mountain.mp3';
+import sound2Ogg from './../../media/sounds/ogg/2-mountain.ogg';
+import sound3Mp3 from './../../media/sounds/mp3/3-forest-shadow.mp3';
+import sound3Ogg from './../../media/sounds/ogg/3-forest-shadow.ogg';
+import sound4Mp3 from './../../media/sounds/mp3/4-taiga.mp3';
+import sound4Ogg from './../../media/sounds/ogg/4-taiga.ogg';
+import sound5Mp3 from './../../media/sounds/mp3/5-blossom-garden.mp3';
+import sound5Ogg from './../../media/sounds/ogg/5-blossom-garden.ogg';
 
 import styles from "./Cakes.module.css";
 
 function Cakes() {
+  const [activeAudio, setActiveAudio] = useState(null);
+
+  const cakesData = [
+    {
+      image: sun,
+      soundMp3: sound1Mp3,
+      soundOgg: sound1Ogg,
+      heading: "«Солнечное поле»",
+      description: [
+        "Слоёное тесто, кули из земляники, ванильный крем шантильи.",
+        "Сладкий запах нагретой солнцем травы, шум рощи вдалеке и едва слышная свирель — это путешествие даёт вдохнуть полной грудью и вглядеться в горизонт за летним лугом."
+      ]
+    },
+    {
+      image: onisan,
+      soundMp3: sound2Mp3,
+      soundOgg: sound2Ogg,
+      heading: "«Onisan»",
+      description: [
+        "Слоёное тесто, кули из земляники, ванильный крем шантильи.",
+        "Сладкий запах нагретой солнцем травы, шум рощи вдалеке и едва слышная свирель — это путешествие даёт вдохнуть полной грудью и вглядеться в горизонт за летним лугом."
+      ]
+    },
+    {
+      image: cube,
+      soundMp3: sound3Mp3,
+      soundOgg: sound3Ogg,
+      heading: "«Cube»",
+      description: [
+        "Слоёное тесто, кули из земляники, ванильный крем шантильи.",
+        "Сладкий запах нагретой солнцем травы, шум рощи вдалеке и едва слышная свирель — это путешествие даёт вдохнуть полной грудью и вглядеться в горизонт за летним лугом."
+      ]
+    },
+    {
+      image: taiga,
+      soundMp3: sound4Mp3,
+      soundOgg: sound4Ogg,
+      heading: "«Taiga»",
+      description: [
+        "Слоёное тесто, кули из земляники, ванильный крем шантильи.",
+        "Сладкий запах нагретой солнцем травы, шум рощи вдалеке и едва слышная свирель — это путешествие даёт вдохнуть полной грудью и вглядеться в горизонт за летним лугом."
+      ]
+    },
+    {
+      image: flower,
+      soundMp3: sound5Mp3,
+      soundOgg: sound5Ogg,
+      heading: "«Flower»",
+      description: [
+        "Слоёное тесто, кули из земляники, ванильный крем шантильи.",
+        "Сладкий запах нагретой солнцем травы, шум рощи вдалеке и едва слышная свирель — это путешествие даёт вдохнуть полной грудью и вглядеться в горизонт за летним лугом."
+      ]
+    }
+  ];
+
+  // Можно в утилиты
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // плавная прокрутка
+    });
+  };
+  
   return (
     <>
       <div className={styles.main}>
         {/* /samokat-art.ru/samokat-sound-desserts */}
+        
         <div className={styles.preloader}>
           <Preloader 
             onFinish={''} 
@@ -22,34 +102,79 @@ function Cakes() {
             isBackground={true} 
           />
         </div>
+        
         <h1 className={styles.heading}>
-          Аудиовкусовые ландшафты коллекция десертов флоу
+          Аудиовкусовые ландшафты
+          Коллекция десертов 
+          Самоката и Flowgardenz
         </h1>
+        
         <div className={styles.downArrow}>
           <img src={arrowWhite} alt="Вниз!" />
         </div>
+
         <div className={styles.intro}>
           <p className={styles.introText}>
-          Эти пять пирожных — часть проекта «Сенсорные ландшафты» от художников Flowgardenz, который мы представляем на ярмарке. Инсталляция отправляет зрителей в путешествие по воображаемым экосистемам с помощью мультисенсорного опыта и современных технологий. К запаху, виду и текстурам разных ландшафтов добавляется вкус необычных пирожных, а также авторские музыкальные композиции, собранные из полевых записей звуков природы. 
+          В рамках ярмарки молодого современного искусства blazar мы поддержали проект художников Flowgardenz — инсталляцию из трёх мультимедийных скульптур. Их можно найти на первом этаже Музея Москвы, в нашей лаундж-зоне.
           </p>
           <p className={styles.introText}>
-          Попробовать пирожные можно в нашем кафе на ярмарке. Ещё некоторые из десертов есть в приложении Самоката. 
+            Эти работы задуманы как коллаж из природных и цифровых материалов. Каждый из них отправит гостей в горы, поле и лес с помощью мультисенсорного опыта и современных технологий. А коллекция арт-десертов, посвящённых разным экосистемам, предложит ещё несколько маршрутов. 
+          </p>
+          <p className={styles.introText}>
+            У каждого из пяти пирожных есть своя история и сертификат подлинности — это тиражные авторские работы. У них есть и свой саунд-дизайн — многослойные композиции на основе звуков полевых ветров, горных рек, птиц и насекомых из разных частей света. 
+          </p>
+          <p className={styles.introText}>
+            Попробовать пирожные можно в нашем кафе на ярмарке. Некоторые из десертов есть в приложении Самоката. 
           </p>
         </div>
-        <div className={`${styles.cakesContainer} ${styles.cakes}`}>
+
+        <div className={styles.cakesContainer}>
           <div className={styles.whiteGradient}></div>
-          <div className={styles.cakeContainer}>
-            <h3 className={styles.cakeHeading}>Коин <br />«Солнечное поле» </h3>
-            <img className={styles.cakeImg} src={sun} alt="" />
-            <div className={styles.cakeTextContainer}>
-              <p className={styles.cakeText}>
-                <span>
-                  Слоёное тесто, кули из земляники, ванильный крем шантильи
-                </span>
-                  Сладкий запах нагретой солнцем травы, шум рощи вдалеке и едва слышная свирель — это путешествие даёт вдохнуть полной грудью и вглядеться в горизонт за летним лугом.              
-                </p>
-            </div>
+          { cakesData.map((cake, index) => (
+            <CakeBlock 
+              className={styles.cakeContainer}
+              key={index}
+              image={cake.image}
+              soundMp3={cake.soundMp3}
+              soundOgg={cake.soundOgg}
+              heading={cake.heading}
+              description={cake.description}
+              activeAudio={activeAudio}
+              setActiveAudio={setActiveAudio}
+              isFirst={index === 0}
+            />
+          ))}
+        </div>
+
+        <div className={styles.creditsContainer}>
+          <p className={styles.creditsContainerHeading}>
+           Над проектом  <br /> работали:
+          </p>
+
+          <div className={styles.creditsInnerContainer}>
+            <p>
+              Авторы проекта:  <br />
+              Кондитеры: <br />
+              Саунд-дизайн:  <br />
+              <br />
+              Куратор: <br />
+              Фотограф <br /> 
+              Сет-дизайнер:
+            </p>
+            <p>
+              художники Flowgardenz <br />
+              кафе-пекарня СЛОЙ <br />
+              Георгий Герасичев,  <br />
+              Михаил Гаврилов <br />
+              Юлия Юсма <br />
+              Дарья Фомина  <br />
+              Светлана Жукова<br />
+            </p>
           </div>
+        </div>
+
+         <div className={styles.upArrow} onClick={scrollToTop}>
+          <img src={arrowPinkBig} alt="Вверх!" />
         </div>
       </div>
     </>

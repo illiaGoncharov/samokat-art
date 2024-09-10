@@ -1,0 +1,68 @@
+.cakeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cakeInfoContainer {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.cakeInfoHeading {
+  font-family: 'EuclidCircularA-Medium';
+  color: #FF335F;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38.04px;
+}
+
+.cakeInfoHeadingWhite {
+  color: white !important;
+}
+
+.cakeImg {
+  width: 100%;
+}
+
+.cakeTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} 
+
+.cakeInfoTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.cakeInfoText {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.36px;
+}
+
+.cakeInfoText:nth-child(2) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.29px;
+}
+
+.playButton {
+  font-family: 'EuclidCircularA-Medium';
+  color: #FF335F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38.04px;
+  background: transparent;
+  border: none;
+  margin-top: 54px;
+  cursor: pointer;
+}
