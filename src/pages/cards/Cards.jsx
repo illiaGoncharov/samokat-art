@@ -10,51 +10,42 @@ import styles from './Cards.module.css';
 import questions from '../../data/questions';
 
 function Cards() {
-  const [isPreloading, setIsPreloading] = useState(true); // Состояние прелоадера
-  const [showInstructions, setShowInstructions] = useState(false); // Состояние инструкций
-  const [showQuestion, setShowQuestion] = useState(false); // Состояние отображения вопроса
+  const [isPreloading, setIsPreloading] = useState(true);
+  const [showInstructions, setShowInstructions] = useState(false);
+  const [showQuestion, setShowQuestion] = useState(false); // Убираем showStartButton
   
-  // ? 
   const [sessionId, setSessionId] = useState(() => {
     const savedId = localStorage.getItem('sessionId');
     return savedId || uuidv4();
   });
 
-  // ?
   const [answeredQuestions, setAnsweredQuestions] = useState(() => {
     const saved = localStorage.getItem(`answeredQuestions_${sessionId}`);
     return saved ? JSON.parse(saved) : [];
   });
-  
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // Индекс текущего вопроса
-  const [showStartButton, setShowStartButton] = useState(false); // Состояние для показа кнопки "Начать"
+
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
   useEffect(() => {
     localStorage.setItem('sessionId', sessionId);
     localStorage.setItem(`answeredQuestions_${sessionId}`, JSON.stringify(answeredQuestions));
   }, [sessionId, answeredQuestions]);
-  
-  // Функция завершения прелоадера
+
   const handlePreloaderFinish = () => {
     setIsPreloading(false);
-    setShowInstructions(true);
+    setShowInstructions(true); // Показываем инструкции после прелоадера
   };
 
-  // Функция начала вопросов
-  const handleStart = () => {
-    setShowStartButton(false);
-    setShowQuestion(true);
-  };
-
-  // Функция завершения инструкций
+  // Завершение инструкций: сразу показываем вопрос
   const handleInstructionsFinish = () => {
-    setShowInstructions(false);
-    setShowStartButton(true); // Показываем кнопку "Начать" после инструкций
+    setShowInstructions(false); // Скрываем инструкции
+    setShowQuestion(true); // Показываем первый вопрос
   };
 
-  // Функция для получения нового вопроса
+  // Получение нового вопроса
   const handleNewQuestion = () => {
     setShowQuestion(false);
+
     const availableQuestions = questions.filter((_, index) => !answeredQuestions.includes(index));
 
     if (availableQuestions.length === 0) {
@@ -75,7 +66,6 @@ function Cards() {
     setTimeout(() => setShowQuestion(true), 500);
   };
 
-  // Листание карточек на десктопе (симуляция кликов для навигации)
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.key === 'ArrowRight' && showQuestion) {
@@ -86,10 +76,8 @@ function Cards() {
     return () => {
       window.removeEventListener('keydown', handleKeyPress);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showQuestion]);
 
-  // Функция для очистки кэша (для разработки)
   const clearCache = () => {
     localStorage.removeItem('sessionId');
     localStorage.removeItem(`answeredQuestions_${sessionId}`);
@@ -97,7 +85,6 @@ function Cards() {
     setAnsweredQuestions([]);
     setCurrentQuestionIndex(null);
     setShowQuestion(false);
-    setShowStartButton(true);
   };
 
   return (
@@ -107,18 +94,14 @@ function Cards() {
         <Preloader 
           onFinish={handlePreloaderFinish} 
           intervalSpeed={500}
-          loop={false} // Прелоадер завершится
-          isBackground={false} // Это обычный прелоадер
+          loop={false}
+          isBackground={false}
         />
       }
-      {/* Карточки с инструкциями */}
+
+      {/* Инструкции */}
       {showInstructions && <InstructionCards onFinish={handleInstructionsFinish} />}
-      {/* Кнопка "Начать" после инструкций */}
-      {showStartButton && (
-        <div className={styles.startButtonContainer}>
-          <button onClick={handleStart}>Начать</button>
-        </div>
-      )}
+
       {/* Вопросы */}
       {showQuestion && currentQuestionIndex !== null && (
         <QuestionCard
@@ -128,6 +111,8 @@ function Cards() {
           isLastQuestion={answeredQuestions.length === questions.length}
         />
       )}
+
+      {/* Очистка кэша для разработки */}
       {process.env.NODE_ENV === 'development' && (
         <button onClick={clearCache} style={{ position: 'fixed', bottom: 10, right: 10 }}>
           Очистить кэш

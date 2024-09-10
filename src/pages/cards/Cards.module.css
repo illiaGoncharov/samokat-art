@@ -4,6 +4,8 @@
   width: calc(100vw - 40px);
   margin: 0 auto;
   max-width: 374px;
+  overflow-y: hidden;
+  padding-bottom: 40px;
 }
 
 .startButtonContainer {

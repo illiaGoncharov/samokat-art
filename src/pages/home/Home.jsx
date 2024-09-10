@@ -118,7 +118,7 @@ function Home() {
           <h3 className={styles.mainInfoWhiteHeading}> Сенсорные ландшафты </h3>
           <p className={styles.mainInfoWhiteSubheading}>
             Мультимедийная инсталляция, 2024
-            <span> Совместно с Flowgardenz</span>
+            <span>Flowgardenz</span>
           </p>
           <div className={styles.infoBlockOther}>
             <img className={styles.infoBlockImg}src={mapPink} alt="" />
@@ -216,7 +216,7 @@ function Home() {
         <h3 className={styles.soundLandscapesHeading}>Аудиовкусовые ландшафты</h3>
         <p className={styles.soundLandscapesSubheading}>
           Коллекция авторских десертов, Flowgardenz
-           <span> Совместно с Flowgardenz</span>
+          <span>Flowgardenz</span>
         </p>
         
         <div className={styles.infoBlockOther}>
@@ -226,7 +226,9 @@ function Home() {
             1 этаж Музея Москвы
           </p>
         </div>
+
         <img className={styles.soundLandscapesImg} src={soundLandscapes} alt="Аудиовкусовые ландшафты" /> 
+        
         <p className={styles.soundLandscapesText}>
           Особый пункт в меню нашего кафе — серия пирожных, которую мы сделали с группой художников Flowgardenz как дополнение к их медиаинсталляции Сенсорные ландшафты. Пять десертов посвящены пяти экосистемам: среди ингредиентов — отсылки к природе разных широт. 
           <br />
@@ -237,7 +239,7 @@ function Home() {
           Попробовать пирожные можно не только в кафе на ярмарке — некоторые из них есть в приложении Самоката.    
         </p>
         <Link to="/samokat-sound-desserts" className={styles.soundLandscapesButtonContainer}>
-          <button className={styles.soundLandscapesButton}>Послушать музыку
+          <button className={styles.soundLandscapesButton}>Послушать
             <img src={arrowPink} alt="" />
           </button>
         </Link>
@@ -254,7 +256,7 @@ function Home() {
           <h3 className={styles.mariaFedorovaHeading}>Лаборатория #FF335F</h3>
           <p className={styles.mariaFedorovaSubheading}>
             Мультимедийная инсталляция, 2024
-            <span>Совместно с Марией Федоровой</span>
+            <span>Мария Федорова</span>
           </p>
           <div className={styles.infoBlockOther}>
             <img className={styles.infoBlockImg}src={mapPink} alt="" />
@@ -332,7 +334,8 @@ function Home() {
           <p className={styles.artOfResearchText}>
             Может ли зритель стать соавтором художественной работы, а незнакомый человек на ярмарке — интересным собеседником? Эти вопросы вы можете задать себе или обсудить с другими — с помощью наших карточек. 
           </p>
-          <Link to="/samokat-cards" className={styles.artOfResearchButtonContainer}>
+          {/* to="/samokat-cards" */}
+          <Link  className={styles.artOfResearchButtonContainer}>
             <button className={styles.artOfResearchButton}>
               Посмотреть ближе
               <img src={arrowPink} alt="" />

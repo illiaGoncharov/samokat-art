@@ -16,7 +16,7 @@ function AppHeader() {
         { process.env.NODE_ENV === 'development' && (
           <nav className={styles.navbar}>
             <Link to="/samokat-cards" className={styles.links}>Карточки</Link>
-            <Link to="/laboratoryff335f" className={styles.links}>Анкета</Link>
+            {/* <Link to="/laboratoryff335f" className={styles.links}>Анкета</Link> */}
             <Link to="/samokat-sound-desserts" className={styles.links}>Пирожные</Link>
             <Link to="/samokat-cafe-menu" className={styles.links}>Меню</Link>
           </nav>

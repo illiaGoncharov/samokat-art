@@ -91,9 +91,8 @@
 }
 
 .navigation {
-  padding-top: 160px;
   width: 100%;
-  margin: 0 auto;
+  margin: 160px auto;
   max-width: 374px;
 }
 
@@ -246,6 +245,7 @@
   color: #FF335F;
   padding-left: 20px;
   padding-right: 20px;
+  margin-top: 15px;
 }
 
 .flowArtistSubheadingBlack {
@@ -380,6 +380,7 @@
 }
 
 .soundLandscapesImg {
+  width: 100%;
   margin-top: 50px;
 }
 
@@ -479,7 +480,6 @@
 }
 
 .mariaFedorovaImg {
-  padding-top: 30px;
   width: 100%;
 }
 

@@ -31,7 +31,7 @@ const ScrollToTop = () => {
 const ApplicationView = () => {
   return (
     <>
-      <ScrollToTop  />
+      <ScrollToTop />
       <AppHeader />
       <Routes>
         <Route path="/" element={<Home />} />
