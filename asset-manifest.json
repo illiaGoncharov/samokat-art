@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/samokat-art/static/css/main.7605f684.css",
-    "main.js": "/samokat-art/static/js/main.1efffe6d.js",
+    "main.css": "/samokat-art/static/css/main.15b2adfe.css",
+    "main.js": "/samokat-art/static/js/main.27b34748.js",
     "static/js/453.8bbe034b.chunk.js": "/samokat-art/static/js/453.8bbe034b.chunk.js",
     "static/media/AR1.usdz": "/samokat-art/static/media/AR1.c19c1622d7674a1d5f46.usdz",
     "static/media/AR4.usdz": "/samokat-art/static/media/AR4.ce452c3c9c0a3990fbcb.usdz",
@@ -13,8 +13,22 @@
     "static/media/AR2.glb": "/samokat-art/static/media/AR2.f62e1af6484b3928fc8b.glb",
     "static/media/flowArtist.jpg": "/samokat-art/static/media/flowArtist.ffe7fa23a1c19cc74345.jpg",
     "static/media/MF2.gif": "/samokat-art/static/media/MF2.7a9c7cad1358a8e4f790.gif",
-    "static/media/MF1.gif": "/samokat-art/static/media/MF1.6069f96365cbf05ac29f.gif",
+    "static/media/MF1.gif": "/samokat-art/static/media/MF1.fe8d47424e97fc014160.gif",
+    "static/media/4-taiga.ogg": "/samokat-art/static/media/4-taiga.f768c2a894f2b409f562.ogg",
+    "static/media/3-forest-shadow.ogg": "/samokat-art/static/media/3-forest-shadow.202e9686a20ba39be868.ogg",
+    "static/media/4-taiga.mp3": "/samokat-art/static/media/4-taiga.d1194ae528f14a311252.mp3",
+    "static/media/5-blossom-garden.ogg": "/samokat-art/static/media/5-blossom-garden.4f3f2a6193f1a9f3a223.ogg",
+    "static/media/3-forest-shadow.mp3": "/samokat-art/static/media/3-forest-shadow.3148aa37281957b5a589.mp3",
+    "static/media/2-mountain.mp3": "/samokat-art/static/media/2-mountain.97fa4e5522e8c9073dbf.mp3",
+    "static/media/2-mountain.ogg": "/samokat-art/static/media/2-mountain.8e8b5a09b6f595a96b6f.ogg",
+    "static/media/1-sun.ogg": "/samokat-art/static/media/1-sun.2e4eab305f547c1515e8.ogg",
     "static/media/1.jpg": "/samokat-art/static/media/1.292a5bdfc8322fcd6bbd.jpg",
+    "static/media/5-blossom-garden.mp3": "/samokat-art/static/media/5-blossom-garden.51f08ee7b3f4643eedbe.mp3",
+    "static/media/1-sun.mp3": "/samokat-art/static/media/1-sun.09af2564413b93a76da2.mp3",
+    "static/media/3.jpg": "/samokat-art/static/media/3.a28e44ec8ce6bdf885d4.jpg",
+    "static/media/4.jpg": "/samokat-art/static/media/4.5f62bcc9b6ba970a2c10.jpg",
+    "static/media/5.jpg": "/samokat-art/static/media/5.c99af3ef488d9ff16980.jpg",
+    "static/media/2.jpg": "/samokat-art/static/media/2.ea9508420615f7f4dc78.jpg",
     "static/media/quiz.jpg": "/samokat-art/static/media/quiz.5414194aa87b77ab6e56.jpg",
     "static/media/soundLandscapes.jpg": "/samokat-art/static/media/soundLandscapes.928ead09a1504a6a2c14.jpg",
     "static/media/mainSensorLandscape.png": "/samokat-art/static/media/mainSensorLandscape.f5d5571cbe405744a342.png",
@@ -35,12 +49,15 @@
     "index.html": "/samokat-art/index.html",
     "static/media/arrow[white].svg": "/samokat-art/static/media/arrow[white].798c4e8808d25081a1bd31a84d7aac3f.svg",
     "static/media/arrow[pink].svg": "/samokat-art/static/media/arrow[pink].58563664e0b7ef7300d8b2737d3060b4.svg",
-    "main.7605f684.css.map": "/samokat-art/static/css/main.7605f684.css.map",
-    "main.1efffe6d.js.map": "/samokat-art/static/js/main.1efffe6d.js.map",
+    "static/media/arrow[pink+big].svg": "/samokat-art/static/media/arrow[pink+big].a173997e7baeb46f4c1a0bf0c65fe4f5.svg",
+    "static/media/play[pink].svg": "/samokat-art/static/media/play[pink].7b88a27758eda58195962400fc5b0517.svg",
+    "static/media/stop[pink].svg": "/samokat-art/static/media/stop[pink].c3788bb6167e3298b2a64f7abe09e24e.svg",
+    "main.15b2adfe.css.map": "/samokat-art/static/css/main.15b2adfe.css.map",
+    "main.27b34748.js.map": "/samokat-art/static/js/main.27b34748.js.map",
     "453.8bbe034b.chunk.js.map": "/samokat-art/static/js/453.8bbe034b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7605f684.css",
-    "static/js/main.1efffe6d.js"
+    "static/css/main.15b2adfe.css",
+    "static/js/main.27b34748.js"
   ]
 }
