@@ -105,8 +105,11 @@ function Cakes() {
         
         <h1 className={styles.heading}>
           Аудиовкусовые ландшафты
-          Коллекция десертов 
-          Самоката и Flowgardenz
+          <span>
+            Коллекция десертов <br />
+            Самоката и Flowgardenz
+          </span>
+          
         </h1>
         
         <div className={styles.downArrow}>

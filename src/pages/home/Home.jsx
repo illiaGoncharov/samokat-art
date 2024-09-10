@@ -34,7 +34,7 @@ function Home() {
       </div>
 
       <h1 className={styles.heading}>
-        Привет! 
+        Привет <br /> Это Самокат!
       </h1>
 
       <div className={styles.downArrow}>

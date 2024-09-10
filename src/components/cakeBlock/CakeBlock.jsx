@@ -8,7 +8,7 @@ import styles from "./CakeBlock.module.css";
 const CakeBlock = ({ image, soundMp3, soundOgg, heading, description, activeAudio, setActiveAudio, isFirst  }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [audio, setAudio] = useState(null);
-  const fadeDuration = 2000; // Время для fade-in и fade-out в миллисекундах
+  const fadeDuration = 500; // Время для fade-in и fade-out в миллисекундах
 
   useEffect(() => {
     const audioElement = new Audio();
