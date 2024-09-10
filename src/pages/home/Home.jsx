@@ -10,10 +10,13 @@ import arrowPinkBig from './../../media/ui/arrow[pink+big].svg';
 import calendar from './../../media/ui/calendar.svg';
 import map from './../../media/ui/map.svg';
 import mapPink from './../../media/ui/map[pink].svg';
+
 import mainSensorLandscape from './../../media/bg/mainSensorLandscape.png';
-import soundLandscapes from './../../media/bg/soundLandscapes.jpg';
+import soundLandscapes from './../../media/bg/soundLandscapes+.jpg';
+
 // import mairaOne from './../../media/bg/mairaOne.jpg';
 // import mairaTwo from './../../media/bg/mairaTwo.jpg';
+
 import mairaOneGif from './../../media/gifs/MF1.gif'; 
 import mairaTwoGif from './../../media/gifs/MF2.gif'; 
 import flowArtist from './../../media/bg/flowArtist.jpg';

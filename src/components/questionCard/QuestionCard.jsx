@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+
+import arrowWhite from './../../media/ui/arrow[white].svg';
+
 import styles from './QuestionCard.module.css';
 
 function QuestionCard({ question, answers, onNewQuestion, isLastQuestion }) {
@@ -57,12 +60,40 @@ function QuestionCard({ question, answers, onNewQuestion, isLastQuestion }) {
 
   return (
     <div className={styles.questionCard} onClick={handleClick}>
+
       {/* Анимация переключения карточек */}
       <div className={`${styles.card} ${styles[fadeClass]}`}>
-        {currentCard === 0 && <h2>{question}</h2>}
+        {currentCard === 0 && 
+          <>
+            <h2 className={styles.cardHeading}>
+              {question}
+            </h2>
+            {/* <div className={styles.arrowContainerQuestion}>
+              <img src={arrowWhite} alt=">" />
+            </div> */}
+          </>
+        }
 
-        {currentCard > 0 && currentCard <= answers.length && <p>{answers[currentCard - 1]}</p>}
+        {currentCard > 0 && currentCard <= answers.length && <p>
+          {answers[currentCard - 1]}
+        </p>}
 
+        <div className={styles.arrowContainer}>
+          {/* Если это первая карточка, показываем только вправо */}
+          {currentCard === 0 && <img src={arrowWhite} className={styles.arrowFirstQuestion} alt=">" />}
+          
+          {/* Если это последняя карточка, показываем только влево */}
+          {/* {currentCard === answers.length && <img src={arrowWhite} alt="<" />} */}
+          
+          {/* Если это не первая и не последняя карточка, показываем обе стрелки */}
+          {currentCard > 0 && currentCard !== answers.length && (
+            <>
+              <img src={arrowWhite} alt="<" />  {/* Стрелка влево */}
+              <img src={arrowWhite} alt=">" />  {/* Стрелка вправо */}
+            </>
+          )}
+        </div>
+        
         {currentCard === answers.length && (
           <div className={styles.lastCard}>
             <div className={styles.actions}>

@@ -18,9 +18,10 @@
   font-family: 'EuclidCircularA-Medium';
   font-size: 46px;
   font-weight: 500;
-  line-height: 58.33px;
+  line-height: 55px;
   text-align: left;
   color: white;
+  width: calc(100vw - 40px);
   max-width: 374px;
   margin: 0 auto;
 }
@@ -36,7 +37,8 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-   max-width: 374px;
+  width: calc(100vw - 40px);
+  max-width: 374px;
   margin: 0 auto;
 }
 
@@ -67,12 +69,20 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: calc(100vw - 40px);
+  max-width: 374px;
+  margin: 0 auto;
 }
 
 .infoBlock {
   display: flex;
   align-items: flex-start;
   gap: 13px;
+}
+
+.infoBlock img,
+.infoBlockOther img {
+  margin-top: 4px;
 }
 
 .infoBlockText {
@@ -159,9 +169,9 @@
    background: linear-gradient(
     180deg,
     #FF335F 0%,     /* Начинаем с розового */
-    #FFFFFF 15%,    /* Быстрый переход к белому */
+    #FFFFFF 10%,    /* Быстрый переход к белому */
     #FFFFFF 90%,    /* Белый остается до 90% высоты */
-    #FF335F 95%,    /* Быстрый переход обратно к розовому */
+    #FFFFFF 95%,    /* Быстрый переход обратно к розовому */
     #FF335F 100%    /* Заканчиваем розовым */
   );
   position: absolute;
@@ -177,15 +187,17 @@
 
 .mainInfoWhiteHeading {
   font-family: 'EuclidCircularA-Medium';
-  color: #404040;
+  /* color: #404040; */
+  color: white;
   font-size: 28px;
   font-weight: 500;
   line-height: 35.5px;
-  padding-top: 180px;
+  /* padding-top: 180px; */
 }
 
 .mainInfoWhiteSubheading {
-  color: #404040;
+  /* color: #404040; */
+  color: white;
   font-size: 22px;
   font-weight: 500;
   line-height: 27.9px;
@@ -206,6 +218,9 @@
   padding-bottom: 200px;
 }
 
+
+
+
 .infoBlockOther {
   padding-top: 20px;
   display: flex;
@@ -223,7 +238,7 @@
 
 .mainInfoContainer {
   max-width: 374px;
-  margin: 160px auto;
+  margin: 0px auto;
 }
 
 .mainInfoImg {
@@ -243,8 +258,9 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-   max-width: 374px;
-  margin: 160px auto;
+  width: calc(100vw - 40px);
+  max-width: 374px;
+  margin: 0px auto;
 }
 
 .flowArtistSubheadingPink {
@@ -252,8 +268,8 @@
   font-weight: 500;
   line-height: 27.9px;
   color: #FF335F;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
   margin-top: 15px;
 }
 
@@ -263,8 +279,8 @@
 }
 
 .flowArtistImg {
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
   width: 60%;
 }
 
@@ -274,8 +290,8 @@
   font-family: 'EuclidCircularA-Regular';
   font-weight: 400;
   line-height: 20.29px;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
 }
 
 .flowArtistCredits {
@@ -284,8 +300,8 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 20.29px;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
 }
 
 .flowArtistCredits p:nth-child(2) {
@@ -328,8 +344,10 @@
 }
 
 .samokatCafe {
+  width: calc(100vw - 40px);
+  width: calc(100vw - 40px);
   max-width: 374px;
-  margin: 160px auto;
+  margin: 0px auto;
 }
 
 .samokatCafeHeading {
@@ -358,6 +376,7 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 100px;
+  width: calc(100vw - 40px);
   max-width: 374px;
   margin: 0px auto;
 }
@@ -463,6 +482,7 @@
 .mariaFedorovaContainer {
   padding-left: 20px;
   padding-right: 20px; 
+  width: calc(100vw - 40px);
   max-width: 374px;
   margin: 0 auto;
 }
@@ -510,14 +530,15 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: calc(100vw - 40px);
   max-width: 374px;
   margin: 0px auto;
 }
 
 .mariaArtist {
   width: 60%;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
 }
 
 .mariaArtistText {
@@ -526,8 +547,8 @@
   font-family: 'EuclidCircularA-Regular';
   font-weight: 400;
   line-height: 20.29px;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
 }
 
 .mariaArtistCredits {
@@ -536,8 +557,8 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 20.29px;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
 }
 
 .mariaArtistCredits p:nth-child(2) {
@@ -550,13 +571,13 @@
   margin: auto;
   background-color: #FF335F;
   border-radius: 28px;
-  margin-top: 75px;
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
   padding-bottom: 60px;
+  width: calc(100vw - 40px);
   max-width: 374px;
-  margin: 0px auto;
+  margin: 75px auto;
 }
 
 .artOfResearchHeading {
@@ -617,6 +638,7 @@
 }
 
 .giftFooter {
+  width: calc(100vw - 40px);
   max-width: 374px;
   margin: 0px auto;
 }
