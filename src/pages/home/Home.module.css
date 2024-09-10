@@ -21,8 +21,8 @@
   line-height: 58.33px;
   text-align: left;
   color: white;
-  width: calc(100% - 40px);
-  margin: auto;
+  max-width: 374px;
+  margin: 0 auto;
 }
 
 .downArrow {
@@ -36,8 +36,8 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  width: calc(100% - 40px);
-  margin: auto;
+   max-width: 374px;
+  margin: 0 auto;
 }
 
 .introText {
@@ -51,8 +51,8 @@
 
 .info {
   padding-top: 100px;
-  width: calc(100% - 40px);
-  margin: auto;
+  max-width: 374px;
+  margin: 0 auto;
 }
 
 .infoHeading {
@@ -91,9 +91,8 @@
 }
 
 .navigation {
-  width: 100%;
+  max-width: 334px;
   margin: 160px auto;
-  max-width: 374px;
 }
 
 .navigationHeading {
@@ -167,9 +166,12 @@
   );
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  width: 100vw;
   height: 100%;
   width: calc(100vw);
-  max-width: 374px;
   z-index: -1;
 }
 
@@ -219,6 +221,11 @@
   line-height: 20.29px;
 }
 
+.mainInfoContainer {
+  max-width: 374px;
+  margin: 160px auto;
+}
+
 .mainInfoImg {
   width: 100%;
 }
@@ -236,6 +243,8 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+   max-width: 374px;
+  margin: 160px auto;
 }
 
 .flowArtistSubheadingPink {
@@ -319,8 +328,8 @@
 }
 
 .samokatCafe {
-  width: calc(100% - 40px);
-  margin: auto;
+  max-width: 374px;
+  margin: 160px auto;
 }
 
 .samokatCafeHeading {
@@ -346,10 +355,11 @@
 }
 
 .soundLandscapes {
-  width: calc(100% - 40px);
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 100px;
+  max-width: 374px;
+  margin: 0px auto;
 }
 
 .soundLandscapesHeading {
@@ -441,16 +451,20 @@
   );
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  width: 100vw;
   height: 100%;
   width: calc(100vw);
-  max-width: 374px;
   z-index: -1;
 }
-
 
 .mariaFedorovaContainer {
   padding-left: 20px;
   padding-right: 20px; 
+  max-width: 374px;
+  margin: 0 auto;
 }
 
 .mariaFedorovaHeading {
@@ -496,6 +510,8 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  max-width: 374px;
+  margin: 0px auto;
 }
 
 .mariaArtist {
@@ -539,6 +555,8 @@
   padding-right: 20px;
   box-sizing: border-box;
   padding-bottom: 60px;
+  max-width: 374px;
+  margin: 0px auto;
 }
 
 .artOfResearchHeading {
@@ -599,8 +617,8 @@
 }
 
 .giftFooter {
-  width: calc(100% - 40px);
-  margin: auto;
+  max-width: 374px;
+  margin: 0px auto;
 }
 
 @keyframes pulse {
@@ -643,13 +661,24 @@
   padding-top: 30px;
 }
 
+.upArrow {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding-bottom: 80px;
+  cursor: pointer;
+}
+
+.upArrow:hover > img {
+  opacity: .9;
+}
+
 .creditsFooter {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding-top: 150px;
-  padding-bottom: 150px;
 }
 
 .creditsFooter .whiteGradient {
@@ -661,6 +690,26 @@
     #FFFFFF 95%,    /* Быстрый переход обратно к розовому */
     #FF335F 100%    /* Заканчиваем розовым */
   );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: 100%;
+  width: calc(100vw);
+  z-index: -1;
+}
+
+.creditsFooterInnerContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  max-width: 374px;
+  margin: 0 auto;
 }
 
 .creditsFooterText {
@@ -671,8 +720,6 @@
   line-height: 20.29px;
   padding-left: 20px;
   padding-right: 20px;
-  width: calc(100% - 40px);
-  margin: auto;
 }
 
 .creditsFooterListHeading {

@@ -5,6 +5,8 @@ import Gift from "./../../components/gift/Gift";
 
 import arrowWhite from './../../media/ui/arrow[white].svg';
 import arrowPink from './../../media/ui/arrow[pink].svg';
+import arrowPinkBig from './../../media/ui/arrow[pink+big].svg';
+
 import calendar from './../../media/ui/calendar.svg';
 import map from './../../media/ui/map.svg';
 import mapPink from './../../media/ui/map[pink].svg';
@@ -21,6 +23,15 @@ import footerBiom from './../../media/forms/4.svg';
 import styles from "./Home.module.css";
 
 function Home() {
+
+  // Можно в утилиты
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // плавная прокрутка
+    });
+  };
+  
   return (
     <div className={styles.main}>
       
@@ -184,11 +195,11 @@ function Home() {
           </div>
         </div>
         
-        <div  className={styles.backToMenuPinkContainer}>
+        {/* <div  className={styles.backToMenuPinkContainer}>
           <a href="#navigation" className={styles.backToMenuPink}>
             Вернуться в начало
           </a>
-        </div>
+        </div> */}
       </div>
 
       <div id="scooter-cafe" className={styles.samokatCafe}>
@@ -243,10 +254,11 @@ function Home() {
             <img src={arrowPink} alt="" />
           </button>
         </Link>
-        <div className={styles.backToMenuWhiteContainer}>
-          <a href="#navigation" className={styles.backToMenuWhite}>Вернуться в начало
+        {/* <div className={styles.backToMenuWhiteContainer}>
+          <a href="#navigation" className={styles.backToMenuWhite}>
+            Вернуться в начало
           </a>
-        </div>
+        </div> */}
       </div>
 
       <div id="lab-ff335f" className={styles.mariaFedorova}>
@@ -321,11 +333,11 @@ function Home() {
           </div>
         </div>
         
-        <div  className={styles.backToMenuPinkContainer}>
+        {/* <div  className={styles.backToMenuPinkContainer}>
           <a href="#navigation" className={styles.backToMenuPink}>
             Вернуться в начало
           </a>
-        </div>
+        </div> */}
 
         {/* Нелогично, что этот модуль часть Марии */}
         <div id="art-of-research" className={styles.artOfResearch}>
@@ -357,124 +369,129 @@ function Home() {
 
         <Gift />
 
-        <div className={styles.backToMenuWhiteContainer}>
+        {/* <div className={styles.backToMenuWhiteContainer}>
           <a href="#navigation" className={styles.backToMenuWhite}>
             Вернуться в начало
           </a>
-        </div>
+        </div> */}
       </div>
 
       <div className={styles.creditsFooter}>
         <div class={styles.whiteGradient}></div>
+        <div className={styles.creditsFooterInnerContainer}>
+          <div className={styles.upArrow} onClick={scrollToTop}>
+            <img src={arrowPinkBig} alt="Вверх!" />
+          </div>
 
-        <p className={styles.creditsFooterText}>
-          Мы считаем, что в цифровом мире важно опираться на реальные ощущения и чувства, а также не забывать о связях между людьми. Поэтому хотим поблагодарить каждого из большой команды, которая создала этот проект. 
-        </p>
+          <p className={styles.creditsFooterText}>
+            Мы считаем, что в цифровом мире важно опираться на реальные ощущения и чувства, а также не забывать о связях между людьми. Поэтому хотим поблагодарить каждого из большой команды, которая создала этот проект. 
+          </p>
 
-        <p className={styles.creditsFooterListHeading}>
-          Художники и креативная команда:
-        </p>
-        
-        <ul className={styles.creditsFooterList}>
-          <li className={styles.creditsFooterListItem}>
-            Мария Федорова <span>художница </span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Владимир Ваненков, Константин Бушманов <span>художники Flowgardenz</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Кристина Макарова <span>продюсер</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Георгий Герасичев, Михаил Гаврилов <span>саунд-дизайнеры инсталляции Сенсорные ландшафты</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Алина Фиалка <span>саунд-дизайнер инсталляции Лаборатория #FF335F</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Иван Якимов <span>создатель ароматов</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Юлия Юсма <span>куратор </span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Татьяна Сиротина <span>продюсер</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Дарья Долгополова <span>арт-директор и графический дизайнер</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Фёдор Иванов <span>технический директор</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Игорь Кудрявцев <span>техническое сопровождение</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Анастасия Голованова <span>световой дизайнер</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Илья Гончаров-Серпов <span>программная часть и разработка</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Михаил Васильев <span>звукорежиссёр</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Богдан Паук, Алёна Савельева, Евгения Тарасова <span>сет-дизайнеры Flowgardenz</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Анна Скворцова <span>флорист студии Мак </span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Дарья Ведяшкина <span>ассистент, медиатор</span>
-          </li>
-        </ul>
+          <p className={styles.creditsFooterListHeading}>
+            Художники и креативная команда:
+          </p>
+          
+          <ul className={styles.creditsFooterList}>
+            <li className={styles.creditsFooterListItem}>
+              Мария Федорова <span>художница </span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Владимир Ваненков, Константин Бушманов <span>художники Flowgardenz</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Кристина Макарова <span>продюсер</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Георгий Герасичев, Михаил Гаврилов <span>саунд-дизайнеры инсталляции Сенсорные ландшафты</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Алина Фиалка <span>саунд-дизайнер инсталляции Лаборатория #FF335F</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Иван Якимов <span>создатель ароматов</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Юлия Юсма <span>куратор </span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Татьяна Сиротина <span>продюсер</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Дарья Долгополова <span>арт-директор и графический дизайнер</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Фёдор Иванов <span>технический директор</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Игорь Кудрявцев <span>техническое сопровождение</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Анастасия Голованова <span>световой дизайнер</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Илья Гончаров-Серпов <span>программная часть и разработка</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Михаил Васильев <span>звукорежиссёр</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Богдан Паук, Алёна Савельева, Евгения Тарасова <span>сет-дизайнеры Flowgardenz</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Анна Скворцова <span>флорист студии Мак </span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Дарья Ведяшкина <span>ассистент, медиатор</span>
+            </li>
+          </ul>
 
-        <p className={styles.creditsFooterListHeading}>
-          Команда Самоката:
-        </p>
-        
-        <ul className={styles.creditsFooterList}>
-          <li className={styles.creditsFooterListItem}>
-            Анна Карасёва <span>руководитель направления маркетинговых коммуникаций, руководитель проекта</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Даниил Зиновик, Александра Яркова, Алёна Сокова <span>старшие креативные продюсеры</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Анастасия Зятнина <span>продюсер продакшена</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Варвара Федотова<span>ведущий копирайтер</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Ксения Яралова<span>старший специалист по публичным коммуникациям</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Ксения Савчук, Амина Амирова<span>специалисты по связям с общественностью </span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Елена Тагирова<span>руководитель группы по работе с блогерами</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Наталья Челюскина<span>менеджер по работе с блогерами</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Юлия Рождественская<span>руководитель отдела по работе с социальными сетями и новыми медиа</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Полина Исакова<span>ведущий менеджер по работе с социальными сетями и новыми медиа</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Дмитрий Павлов<span>главный коммуникационный дизайнер</span>
+          <p className={styles.creditsFooterListHeading}>
+            Команда Самоката:
+          </p>
+          
+          <ul className={styles.creditsFooterList}>
+            <li className={styles.creditsFooterListItem}>
+              Анна Карасёва <span>руководитель направления маркетинговых коммуникаций, руководитель проекта</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Даниил Зиновик, Александра Яркова, Алёна Сокова <span>старшие креативные продюсеры</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Анастасия Зятнина <span>продюсер продакшена</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Варвара Федотова<span>ведущий копирайтер</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Ксения Яралова<span>старший специалист по публичным коммуникациям</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Ксения Савчук, Амина Амирова<span>специалисты по связям с общественностью </span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Елена Тагирова<span>руководитель группы по работе с блогерами</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Наталья Челюскина<span>менеджер по работе с блогерами</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Юлия Рождественская<span>руководитель отдела по работе с социальными сетями и новыми медиа</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Полина Исакова<span>ведущий менеджер по работе с социальными сетями и новыми медиа</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Дмитрий Павлов<span>главный коммуникационный дизайнер</span>
 
-          </li>
-          <li className={styles.creditsFooterListItem}>
-           Елена Салмина<span>ведущий коммуникационный дизайнер</span>
-          </li>
-          <li className={styles.creditsFooterListItem}>
-            Елена Ковтун, Виталий Морозов, Алексей Панов <span>кафе-пекарня СЛОЙ</span>
-          </li>
-        </ul>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+            Елена Салмина<span>ведущий коммуникационный дизайнер</span>
+            </li>
+            <li className={styles.creditsFooterListItem}>
+              Елена Ковтун, Виталий Морозов, Алексей Панов <span>кафе-пекарня СЛОЙ</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   )

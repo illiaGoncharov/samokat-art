@@ -5,7 +5,7 @@ import stopPink from "./../../media/ui/stop[pink].svg";
 
 import styles from "./CakeBlock.module.css"; 
 
-const CakeBlock = ({ image, soundMp3, soundOgg, heading, description, activeAudio, setActiveAudio, isFirst  }) => {
+const CakeBlock = ({ image, soundMp3, soundOgg, type, heading, description, activeAudio, setActiveAudio, isFirst  }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [audio, setAudio] = useState(null);
   const fadeDuration = 1000; // Время для fade-in и fade-out в миллисекундах
@@ -101,7 +101,7 @@ const CakeBlock = ({ image, soundMp3, soundOgg, heading, description, activeAudi
     <div className={styles.cakeContainer}>
       <div className={styles.whiteGradient}></div>
 
-        <h3 className={`${styles.cakeInfoHeading} ${isFirst ? styles.cakeInfoHeadingWhite : styles.cakeInfoHeading}`} >Коин <br /> {heading}</h3>
+        <h3 className={`${styles.cakeInfoHeading} ${isFirst ? styles.cakeInfoHeadingWhite : styles.cakeInfoHeading}`} >{type} <br /> {heading}</h3>
 
         <div className={styles.cakeImgContainer}>
           <img className={styles.cakeImg} src={image} alt={heading} />

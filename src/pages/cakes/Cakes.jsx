@@ -33,6 +33,7 @@ function Cakes() {
       image: sun,
       soundMp3: sound1Mp3,
       soundOgg: sound1Ogg,
+      type: "Коин",
       heading: "«Солнечное поле»",
       description: [
         "Слоёное тесто, кули из земляники, ванильный крем шантильи.",
@@ -43,6 +44,7 @@ function Cakes() {
       image: onisan,
       soundMp3: sound2Mp3,
       soundOgg: sound2Ogg,
+      type: "Онисан",
       heading: "«Горный склон»",
       description: [
         "Компоте из облепихи и шоколадный ганаш с саган-дайля.",
@@ -53,6 +55,7 @@ function Cakes() {
       image: cube,
       soundMp3: sound3Mp3,
       soundOgg: sound3Ogg,
+      type: "Куб",
       heading: "«Лесная тень»",
       description: [
         "Слоёное тесто, заварной крем, фундучное пралине с мёдом.",
@@ -63,6 +66,7 @@ function Cakes() {
       image: taiga,
       soundMp3: sound4Mp3,
       soundOgg: sound4Ogg,
+      type: "Эклер",
       heading: "«Тайга»",
       description: [
         "Крем с исландским мхом, конфи из клюквы и брусники.",
@@ -73,6 +77,7 @@ function Cakes() {
       image: flower,
       soundMp3: sound5Mp3,
       soundOgg: sound5Ogg,
+      type: "Эклер",
       heading: "«Цветущий сад»",
       description: [
         "Ганаш из белого шоколада с жасмином и кули из розы и малины.",
@@ -140,6 +145,7 @@ function Cakes() {
               image={cake.image}
               soundMp3={cake.soundMp3}
               soundOgg={cake.soundOgg}
+              type={cake.type}
               heading={cake.heading}
               description={cake.description}
               activeAudio={activeAudio}
@@ -150,35 +156,36 @@ function Cakes() {
         </div>
 
         <div className={styles.creditsContainer}>
-          <p className={styles.creditsContainerHeading}>
-           Над проектом  <br /> работали:
-          </p>
+          <div className={styles.creditsSubContainer}>
+            <p className={styles.creditsContainerHeading}>
+              Над проектом  <br /> работали:
+              </p>
 
-          <div className={styles.creditsInnerContainer}>
-            <p>
-              Авторы проекта:  <br />
-              Кондитеры: <br />
-              Саунд-дизайн:  <br />
-              <br />
-              Куратор: <br />
-              Фотограф <br /> 
-              Сет-дизайнер:
-            </p>
-            <p>
-              художники Flowgardenz <br />
-              кафе-пекарня СЛОЙ <br />
-              Георгий Герасичев,  <br />
-              Михаил Гаврилов <br />
-              Юлия Юсма <br />
-              Дарья Фомина  <br />
-              Светлана Жукова<br />
-            </p>
+              <div className={styles.creditsInnerContainer}>
+                <p>
+                  Авторы проекта:  <br />
+                  Кондитеры: <br />
+                  Саунд-дизайн:  <br />
+                  <br />
+                  Куратор: <br />
+                  Фотограф <br /> 
+                  Сет-дизайнер:
+                </p>
+                <p>
+                  художники Flowgardenz <br />
+                  кафе-пекарня СЛОЙ <br />
+                  Георгий Герасичев,  <br />
+                  Михаил Гаврилов <br />
+                  Юлия Юсма <br />
+                  Дарья Фомина  <br />
+                  Светлана Жукова<br />
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-
          <div className={styles.upArrow} onClick={scrollToTop}>
           <img src={arrowPinkBig} alt="Вверх!" />
-        </div>
+         </div>
       </div>
     </>
   )
